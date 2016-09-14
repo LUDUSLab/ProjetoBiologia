@@ -1,13 +1,24 @@
 fileFormatVersion: 2
 guid: c8f6c95da58613e43b5ad56943c2158c
-timeCreated: 1473858029
+timeCreated: 1473859876
 licenseType: Free
 TextureImporter:
-  fileIDToRecycleName: {}
+  fileIDToRecycleName:
+    21300000: "Bot\xF5es_0"
+    21300002: "Bot\xF5es_1"
+    21300004: "Bot\xF5es_2"
+    21300006: "Bot\xF5es_3"
+    21300008: "Bot\xF5es_4"
+    21300010: "Bot\xF5es_5"
+    21300012: "Bot\xF5es_6"
+    21300014: "Bot\xF5es_7"
+    21300016: "Bot\xF5es_8"
+    21300018: "Bot\xF5es_9"
+    21300020: "Bot\xF5es_10"
   serializedVersion: 2
   mipmaps:
     mipMapMode: 0
-    enableMipMap: 1
+    enableMipMap: 0
     linearTexture: 0
     correctGamma: 0
     fadeOut: 0
@@ -26,11 +37,11 @@ TextureImporter:
   cubemapConvolutionSteps: 7
   cubemapConvolutionExponent: 1.5
   seamlessCubemap: 0
-  textureFormat: -1
-  maxTextureSize: 2048
+  textureFormat: -3
+  maxTextureSize: 1024
   textureSettings:
     filterMode: -1
-    aniso: -1
+    aniso: 16
     mipBias: -1
     wrapMode: 1
   nPOTScale: 0
@@ -38,7 +49,7 @@ TextureImporter:
   rGBM: 0
   compressionQuality: 50
   allowsAlphaSplitting: 0
-  spriteMode: 1
+  spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -49,7 +60,217 @@ TextureImporter:
   textureType: 8
   buildTargetSettings: []
   spriteSheet:
-    sprites: []
+    sprites:
+    - name: "Bot\xF5es_0"
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 205
+        height: 207
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -40, y: 47}
+        - {x: -47, y: 23}
+        - {x: -47, y: -41}
+        - {x: -44, y: -47}
+        - {x: 37, y: -47}
+        - {x: 47, y: -45}
+        - {x: 47, y: 29}
+        - {x: 26, y: 47}
+    - name: "Bot\xF5es_1"
+      rect:
+        serializedVersion: 2
+        x: 205
+        y: 0
+        width: 205
+        height: 207
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -42.90909, y: 47}
+        - {x: -46.90909, y: 42}
+        - {x: -46.90909, y: -31}
+        - {x: -39.90909, y: -47}
+        - {x: 34.09091, y: -47}
+        - {x: 47.09091, y: -27}
+        - {x: 47.09091, y: 40}
+        - {x: 25.090912, y: 47}
+    - name: "Bot\xF5es_2"
+      rect:
+        serializedVersion: 2
+        x: 410
+        y: 0
+        width: 205
+        height: 207
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -44.818176, y: 47}
+        - {x: -46.818176, y: 44}
+        - {x: -46.818176, y: -36}
+        - {x: -23.818176, y: -47}
+        - {x: 28.181824, y: -47}
+        - {x: 47.181824, y: -26}
+        - {x: 47.181824, y: 32}
+        - {x: 44.181824, y: 47}
+    - name: "Bot\xF5es_3"
+      rect:
+        serializedVersion: 2
+        x: 615
+        y: 0
+        width: 205
+        height: 207
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -46.727264, y: 47}
+        - {x: -46.727264, y: -38}
+        - {x: -26.727264, y: -47}
+        - {x: 38.272736, y: -47}
+        - {x: 47.272736, y: -38}
+        - {x: 47.272736, y: 40}
+        - {x: 44.272736, y: 47}
+    - name: "Bot\xF5es_4"
+      rect:
+        serializedVersion: 2
+        x: 820
+        y: 0
+        width: 205
+        height: 207
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -37.636353, y: 47}
+        - {x: -46.636353, y: 30}
+        - {x: -46.636353, y: -39}
+        - {x: -23.636353, y: -47}
+        - {x: 30.363647, y: -47}
+        - {x: 47.363647, y: -28}
+        - {x: 47.363647, y: 25}
+        - {x: 28.363647, y: 47}
+    - name: "Bot\xF5es_5"
+      rect:
+        serializedVersion: 2
+        x: 1025
+        y: 0
+        width: 205
+        height: 207
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -37.54544, y: 47}
+        - {x: -46.54544, y: 43}
+        - {x: -46.54544, y: -32}
+        - {x: -31.54544, y: -47}
+        - {x: 30.45456, y: -47}
+        - {x: 47.45456, y: -42}
+        - {x: 47.45456, y: 45}
+        - {x: 46.45456, y: 47}
+    - name: "Bot\xF5es_6"
+      rect:
+        serializedVersion: 2
+        x: 1230
+        y: 0
+        width: 205
+        height: 207
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 29.545471, y: 47}
+        - {x: -43.45453, y: 47}
+        - {x: -46.45453, y: 46}
+        - {x: -46.45453, y: -45}
+        - {x: -34.45453, y: -47}
+        - {x: 35.54547, y: -47}
+        - {x: 42.54547, y: -43}
+        - {x: 47.54547, y: -27}
+        - {x: 47.54547, y: 28}
+    - name: "Bot\xF5es_7"
+      rect:
+        serializedVersion: 2
+        x: 1435
+        y: 0
+        width: 205
+        height: 207
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -34.363586, y: 47}
+        - {x: -46.363586, y: 41}
+        - {x: -46.363586, y: -30}
+        - {x: -30.363586, y: -47}
+        - {x: 43.636414, y: -47}
+        - {x: 47.636414, y: -32}
+        - {x: 47.636414, y: 30}
+        - {x: 33.636414, y: 47}
+    - name: "Bot\xF5es_8"
+      rect:
+        serializedVersion: 2
+        x: 1640
+        y: 0
+        width: 205
+        height: 207
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 28.727295, y: 47}
+        - {x: -29.272705, y: 47}
+        - {x: -46.272705, y: 29}
+        - {x: -46.272705, y: -42}
+        - {x: -26.272705, y: -47}
+        - {x: 35.727295, y: -47}
+        - {x: 47.727295, y: -29}
+        - {x: 47.727295, y: 18}
+        - {x: 31.727295, y: 46}
+    - name: "Bot\xF5es_9"
+      rect:
+        serializedVersion: 2
+        x: 1845
+        y: 0
+        width: 205
+        height: 207
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -30.181763, y: 47}
+        - {x: -46.181763, y: 43}
+        - {x: -46.181763, y: -28}
+        - {x: -24.181763, y: -47}
+        - {x: 41.818237, y: -47}
+        - {x: 47.818237, y: -25}
+        - {x: 47.818237, y: 31}
+        - {x: 35.818237, y: 47}
+    - name: "Bot\xF5es_10"
+      rect:
+        serializedVersion: 2
+        x: 2050
+        y: 0
+        width: 205
+        height: 207
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -24.090881, y: 47}
+        - {x: -46.09088, y: 26}
+        - {x: -46.09088, y: -33}
+        - {x: -36.09088, y: -47}
+        - {x: 36.90912, y: -47}
+        - {x: 47.90912, y: -42}
+        - {x: 47.90912, y: 26}
+        - {x: 28.909119, y: 47}
     outline: []
   spritePackingTag: 
   userData: 
