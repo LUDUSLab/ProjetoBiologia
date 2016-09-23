@@ -18,7 +18,7 @@ public class End : MonoBehaviour {
     {
         if(persona.transform.position.x >=70 && persona.transform.position.x <= 71)
         {
-            SceneManager.LoadScene("fim");
+            SceneManager.LoadScene("FimFase");
         }
     }
 }

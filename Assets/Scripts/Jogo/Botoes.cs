@@ -3,7 +3,7 @@ using System.Collections;
 
 public class Botoes : MonoBehaviour {
 
-    public GameObject balAud, balTato, balVisao, balPaladar, balOlfato, indio, babanana, pedrinha, moita, flor;
+    public GameObject balAud, balTato, balVisao, balPaladar, balOlfato, indio, babanana, pedrinha, moita, flor, newIndio;
     bool audi=false, tato=false, visa=false, pala=false, olfa=false;
     private indiozinho personagem;
 
@@ -34,6 +34,7 @@ public class Botoes : MonoBehaviour {
         {
             if (audi == false)
             {
+				newIndio.GetComponent<Animator>().Play("indioParado");
                 personagem.goOrStay = false;
                 audi = true;
                 balAud.SetActive(true);
@@ -59,6 +60,7 @@ public class Botoes : MonoBehaviour {
         {
             if (tato == false)
             {
+				newIndio.GetComponent<Animator>().Play("indioParado");
                 personagem.goOrStay = false;
                 tato = true;
                 balTato.SetActive(true);
@@ -85,6 +87,7 @@ public class Botoes : MonoBehaviour {
         {
             if (visa == false)
             {
+				newIndio.GetComponent<Animator>().Play("indioParado");
                 personagem.goOrStay = false;
                 visa = true;
                 balVisao.SetActive(true);
@@ -111,6 +114,7 @@ public class Botoes : MonoBehaviour {
         {
             if (pala == false)
             {
+				newIndio.GetComponent<Animator>().Play("indioParado");
                 personagem.goOrStay = false;
                 pala = true;
                 balPaladar.SetActive(true);
@@ -137,6 +141,7 @@ public class Botoes : MonoBehaviour {
         {
             if (olfa == false)
             {
+				newIndio.GetComponent<Animator>().Play("indioParado");
                 personagem.goOrStay = false;
                 olfa = true;
                 balOlfato.SetActive(true);
