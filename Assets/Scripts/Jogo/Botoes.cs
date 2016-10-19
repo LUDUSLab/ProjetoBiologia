@@ -34,7 +34,7 @@ public class Botoes : MonoBehaviour {
         {
             if (audi == false)
             {
-				newIndio.GetComponent<Animator>().Play("indioParado");
+				newIndio.GetComponent<Animator>().Play("ÍndioParado");
                 personagem.goOrStay = false;
                 audi = true;
                 balAud.SetActive(true);
