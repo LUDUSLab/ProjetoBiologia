@@ -17,6 +17,7 @@ public class indiozinho : MonoBehaviour {
         {
             transform.Translate(Vector2.right * velo * Time.deltaTime);
 			indi.GetComponent<Animator>().Play("indioAndando");
+            Debug.Log("andando");
         }
     }
 }

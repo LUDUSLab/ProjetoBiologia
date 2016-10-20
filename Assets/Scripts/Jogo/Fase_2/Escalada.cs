@@ -23,11 +23,10 @@ public class Escalada : MonoBehaviour {
 
     void stopTato()
     {
-        if(indio.transform.position.x >=4.5 && indio.transform.position.x <=5.5)
+        if(indio.transform.position.x >=4.3 && indio.transform.position.x <=4.7)
         {
             if(tato == false)
             {
-				
                 personagem.goOrStay = false;
                 tato = true;
             }
@@ -41,6 +40,8 @@ public class Escalada : MonoBehaviour {
 			Vector2 direcaoPulo = new Vector2(0.1f,0.5f);
 			direcaoPulo.Normalize();
 			indio.GetComponent<Rigidbody2D>().AddForce(direcaoPulo * forcinhaPraPular);
+            this.GetComponent<Escalada>().enabled = false;
+            personagem.goOrStay = true;
 		}
 	}
 }
