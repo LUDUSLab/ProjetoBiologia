@@ -27,7 +27,7 @@ public class Jatoba : MonoBehaviour {
 
     void stopJatoba()
     {
-        if(indio.transform.position.x >= 65 && indio.transform.position.x <= 65.8)
+        if(indio.transform.position.x >= 65 && indio.transform.position.x <= 65.1)
         {
             if(paladar == false)
             {
@@ -47,6 +47,7 @@ public class Jatoba : MonoBehaviour {
                 jatobazinho.SetActive(false);
                 personagem.goOrStay = true;
                 paladar = false;
+                this.GetComponent<Jatoba>().enabled = false;
 
             }
         }
