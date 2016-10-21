@@ -4,10 +4,12 @@ using UnityEngine.SceneManagement;
 
 public class Escalada : MonoBehaviour {
 
-    public GameObject indio;
+    public GameObject indio, barraTempoObject;
     bool tato = false;
     private indiozinho personagem;
 	public float forcinhaPraPular;
+    public float tempoBarrinha;
+    private float tempoInicial;
 
 	// Use this for initialization
 	void Start () {
@@ -18,6 +20,10 @@ public class Escalada : MonoBehaviour {
 	void Update () {
         stopTato();
 		goEscalada();
+        if(Time.time - tempoInicial > tempoBarrinha && barraTempoObject.active)
+        {
+            SceneManager.LoadScene("gameOver");
+        }
 	}
 
     void stopTato()
@@ -28,6 +34,8 @@ public class Escalada : MonoBehaviour {
             {
                 personagem.goOrStay = false;
                 indio.GetComponent<Animator>().SetBool("parar", true);
+                barraTempoObject.SetActive(true);
+                tempoInicial = Time.time;
                 tato = true;
             }
         }
@@ -43,6 +51,7 @@ public class Escalada : MonoBehaviour {
             this.GetComponent<Escalada>().enabled = false;
             personagem.goOrStay = true;
             indio.GetComponent<Animator>().SetBool("parar", false);
+            barraTempoObject.SetActive(false);
         }
         else if (Input.GetKeyDown(KeyCode.Keypad1) || Input.GetKeyDown(KeyCode.Keypad2) || Input.GetKeyDown(KeyCode.Keypad4) || Input.GetKeyDown(KeyCode.Keypad5))
         {
