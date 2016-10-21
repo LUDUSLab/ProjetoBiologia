@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using System.Collections;
+using UnityEngine.SceneManagement;
 
 public class Cipo : MonoBehaviour {
 
@@ -38,6 +39,13 @@ public class Cipo : MonoBehaviour {
             cipoVerde.SetActive(true);
             personagem.goOrStay = true;
         }
+        else if (Input.GetKeyDown(KeyCode.Keypad1) || Input.GetKeyDown(KeyCode.Keypad2) || Input.GetKeyDown(KeyCode.Keypad3) || Input.GetKeyDown(KeyCode.Keypad4))
+        {
+            if (indio.transform.position.x >= 16 && indio.transform.position.x <= 16.9)
+            {
+                SceneManager.LoadScene("gameOver");
+            }
+        }
     }
 
     void stopPularCipo()
@@ -62,8 +70,15 @@ public class Cipo : MonoBehaviour {
                 Vector2 direcaoPulo = new Vector2(0.1f, 0.5f);
                 direcaoPulo.Normalize();
                 indio.GetComponent<Rigidbody2D>().AddForce(direcaoPulo * forcinhaPraPular);
-                //this.GetComponent<Cipo>().enabled = false;
+                this.GetComponent<Cipo>().enabled = false;
                 personagem.goOrStay = true;
+            }
+        }
+        else if (Input.GetKeyDown(KeyCode.Keypad1) || Input.GetKeyDown(KeyCode.Keypad2) || Input.GetKeyDown(KeyCode.Keypad4) || Input.GetKeyDown(KeyCode.Keypad5))
+        {
+            if (indio.transform.position.x >= 23.5 && indio.transform.position.x <= 23.9)
+            {
+                SceneManager.LoadScene("gameOver");
             }
         }
     }
