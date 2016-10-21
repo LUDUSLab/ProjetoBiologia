@@ -15,10 +15,8 @@ public class Escalada : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-
         stopTato();
 		goEscalada();
-	
 	}
 
     void stopTato()
