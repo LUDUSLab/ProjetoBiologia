@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using System.Collections;
+using UnityEngine.SceneManagement;
 
 public class Jatoba : MonoBehaviour {
 
@@ -49,6 +50,13 @@ public class Jatoba : MonoBehaviour {
                 paladar = false;
                 this.GetComponent<Jatoba>().enabled = false;
 
+            }
+        }
+        else if (Input.GetKeyDown(KeyCode.Keypad1) || Input.GetKeyDown(KeyCode.Keypad3) || Input.GetKeyDown(KeyCode.Keypad4) || Input.GetKeyDown(KeyCode.Keypad5))
+        {
+            if (indio.transform.position.x >= 65 && indio.transform.position.x <= 65.5)
+            {
+                SceneManager.LoadScene("gameOver");
             }
         }
     }

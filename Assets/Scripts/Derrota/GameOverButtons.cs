@@ -4,6 +4,8 @@ using UnityEngine.SceneManagement;
 
 public class GameOverButtons : MonoBehaviour {
 
+    public string tryAgain;
+
 	public void Menu()
 	{
 		SceneManager.LoadScene ("Menu");
@@ -11,7 +13,7 @@ public class GameOverButtons : MonoBehaviour {
 
 	public void TryAgain()
 	{
-		SceneManager.LoadScene ("Fase1");
+		SceneManager.LoadScene (tryAgain);
 	}
 
 	public void MenuTo()
