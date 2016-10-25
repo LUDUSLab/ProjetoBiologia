@@ -4,10 +4,13 @@ using UnityEngine.SceneManagement;
 
 public class Cipo : MonoBehaviour {
 
-    public GameObject indio, cipoVerde;
+	public GameObject indio, cipoVerde, balaoDuvida,barraTempoObject;
     private indiozinho personagem;
     bool visao = false, tato = false;
     public float forcinhaPraPular;
+	public float tempoBarrinha;
+	private float tempoInicial;
+
 
     void Start () {
         personagem = indio.GetComponent<indiozinho>();
@@ -18,26 +21,32 @@ public class Cipo : MonoBehaviour {
         goVerCipo();
         stopPularCipo();
         goPularCipo();
+
 	}
 
     void stopVerCipo()
     {
-        if(indio.transform.position.x >= 16 && indio.transform.position.x <= 16.9)
+        if(indio.transform.position.x >= 20 && indio.transform.position.x <= 20.9)
         {
             if(visao == false)
             {
-                personagem.goOrStay = false;
-                visao = true;
+				personagem.goOrStay = false;
+				balaoDuvida.SetActive (true);
+				indio.GetComponent<Animator>().SetBool("parar", true);
+                barraTempoObject.SetActive(true);
+				visao = true;
             }
         }
     }
 
     void goVerCipo()
     {
-        if (Input.GetKeyDown(KeyCode.Keypad5))
+		if (Input.GetKeyDown(KeyCode.Keypad5)|| Input.GetKeyDown(KeyCode.W))
         {
             cipoVerde.SetActive(true);
             personagem.goOrStay = true;
+			barraTempoObject.SetActive(false);
+			indio.GetComponent<Animator>().SetBool("parar", false);
         }
         else if (Input.GetKeyDown(KeyCode.Keypad1) || Input.GetKeyDown(KeyCode.Keypad2) || Input.GetKeyDown(KeyCode.Keypad3) || Input.GetKeyDown(KeyCode.Keypad4))
         {
@@ -54,24 +63,32 @@ public class Cipo : MonoBehaviour {
         {
             if (tato == false)
             {
+				barraTempoObject.SetActive(true);
+				balaoDuvida.SetActive (true);
                 personagem.goOrStay = false;
                 tato = true;
+				indio.GetComponent<Animator>().SetBool("parar", true);
             }
         }
     }
 
     void goPularCipo()
     {
-        if (Input.GetKeyDown(KeyCode.Keypad3))
+		if (Input.GetKeyDown(KeyCode.Keypad3)|| Input.GetKeyDown(KeyCode.E))
         {
             if (tato == true)
             {
+				
+				balaoDuvida.SetActive (false);
+				barraTempoObject.SetActive(false);
                 tato = false;
-                Vector2 direcaoPulo = new Vector2(0.1f, 0.5f);
+                Vector2 direcaoPulo = new Vector2(0.7f, 0.8f);
                 direcaoPulo.Normalize();
                 indio.GetComponent<Rigidbody2D>().AddForce(direcaoPulo * forcinhaPraPular);
                 this.GetComponent<Cipo>().enabled = false;
-                personagem.goOrStay = true;
+				//personagem.goOrStay = true;
+				indio.GetComponent<Animator>().SetBool("pulando", true);
+				Invoke("VoltaraAndar", 1.2f);
             }
         }
         else if (Input.GetKeyDown(KeyCode.Keypad1) || Input.GetKeyDown(KeyCode.Keypad2) || Input.GetKeyDown(KeyCode.Keypad4) || Input.GetKeyDown(KeyCode.Keypad5))
@@ -82,4 +99,9 @@ public class Cipo : MonoBehaviour {
             }
         }
     }
+	void VoltaraAndar(){
+		personagem.goOrStay = true;
+		indio.GetComponent<Animator>().SetBool("parar", false);
+		indio.GetComponent<Animator>().SetBool("pulando", false);
+	}
 }
