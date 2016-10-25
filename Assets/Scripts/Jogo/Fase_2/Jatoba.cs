@@ -6,7 +6,9 @@ public class Jatoba : MonoBehaviour {
 
 	public GameObject jatobazinho, indio, balaoDuvida, 	barraTempoObject;
     private indiozinho personagem;
-    bool paladar = false;
+    bool paladar = false, nariz = false;
+	public float tempoBarrinha;
+	private float tempoInicial;
 
     void Start () {
         personagem = indio.GetComponent<indiozinho>();
@@ -14,6 +16,8 @@ public class Jatoba : MonoBehaviour {
 	
 	void Update () {
         jatobaCaindo();
+		stopCheirar();
+		goCheirar();
         stopJatoba();
         goJatoba();
     }
@@ -26,6 +30,44 @@ public class Jatoba : MonoBehaviour {
         }
     }
 
+	void stopCheirar()
+	{
+		if(indio.transform.position.x >=63 && indio.transform.position.x <= 63.1)
+		{
+			if(nariz == false)
+			{
+				personagem.goOrStay = false;
+				indio.GetComponent<Animator>().SetBool("parar", true);
+				nariz = true;
+			}
+			
+		}
+	}
+
+	void goCheirar()
+	{
+		if(Input.GetKeyDown(KeyCode.Keypad1))
+		{
+			if(nariz == true)
+			{
+				nariz = false;
+				barraTempoObject.SetActive(false);
+				personagem.goOrStay = true;
+				indio.GetComponent<Animator>().SetBool("parar", false);
+				//KD ELE CHEIRANDO
+				//Invoke("VoltaraAndar", 4);
+			}
+		}
+		else if (Input.GetKeyDown(KeyCode.Keypad2) || Input.GetKeyDown(KeyCode.Keypad3) || Input.GetKeyDown(KeyCode.Keypad4) || Input.GetKeyDown(KeyCode.Keypad5))
+		{
+			if (indio.transform.position.x >= 63 && indio.transform.position.x <= 63.1)
+			{
+				Debug.Log("Batata Doce");
+				SceneManager.LoadScene("gameOver");
+			}
+		}
+	}
+
     void stopJatoba()
     {
         if(indio.transform.position.x >= 65 && indio.transform.position.x <= 65.1)
@@ -35,7 +77,6 @@ public class Jatoba : MonoBehaviour {
 				balaoDuvida.SetActive (true);
                 personagem.goOrStay = false;
 				indio.GetComponent<Animator>().SetBool("parar", true);
-				barraTempoObject.SetActive(true);
                 paladar = true;
             }
         }
@@ -51,7 +92,6 @@ public class Jatoba : MonoBehaviour {
 				balaoDuvida.SetActive (false);
                 paladar = false;
                 this.GetComponent<Jatoba>().enabled = false;
-				barraTempoObject.SetActive(false);
 				indio.GetComponent<Animator>().SetBool("comer", true);
 				jatobazinho.SetActive(false);
 				Invoke("VoltaraAndar", 4);
@@ -59,7 +99,7 @@ public class Jatoba : MonoBehaviour {
         }
         else if (Input.GetKeyDown(KeyCode.Keypad1) || Input.GetKeyDown(KeyCode.Keypad3) || Input.GetKeyDown(KeyCode.Keypad4) || Input.GetKeyDown(KeyCode.Keypad5))
         {
-            if (indio.transform.position.x >= 65 && indio.transform.position.x <= 65.5)
+            if (indio.transform.position.x >= 65 && indio.transform.position.x <= 65.1)
             {
                 SceneManager.LoadScene("gameOver");
             }
