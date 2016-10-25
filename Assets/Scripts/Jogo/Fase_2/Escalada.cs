@@ -53,7 +53,7 @@ public class Escalada : MonoBehaviour {
             this.GetComponent<Escalada>().enabled = false;
 			indio.GetComponent<Animator>().SetBool("pulando", true);
 			//personagem.goOrStay = true;
-			Invoke("VoltaraAndar", 1.2f);
+			Invoke("VoltaraAndar", 0.6f);
             barraTempoObject.SetActive(false);
         }
         else if (Input.GetKeyDown(KeyCode.Keypad1) || Input.GetKeyDown(KeyCode.Keypad2) || Input.GetKeyDown(KeyCode.Keypad4) || Input.GetKeyDown(KeyCode.Keypad5))

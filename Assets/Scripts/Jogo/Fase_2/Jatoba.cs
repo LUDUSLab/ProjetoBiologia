@@ -4,7 +4,7 @@ using UnityEngine.SceneManagement;
 
 public class Jatoba : MonoBehaviour {
 
-    public GameObject jatobazinho, indio;
+	public GameObject jatobazinho, indio, balaoDuvida, 	barraTempoObject;
     private indiozinho personagem;
     bool paladar = false;
 
@@ -32,7 +32,10 @@ public class Jatoba : MonoBehaviour {
         {
             if(paladar == false)
             {
+				balaoDuvida.SetActive (true);
                 personagem.goOrStay = false;
+				indio.GetComponent<Animator>().SetBool("parar", true);
+				barraTempoObject.SetActive(true);
                 paladar = true;
             }
         }
@@ -45,11 +48,13 @@ public class Jatoba : MonoBehaviour {
         {
             if(paladar == true)
             {
-                jatobazinho.SetActive(false);
-                personagem.goOrStay = true;
+				balaoDuvida.SetActive (false);
                 paladar = false;
                 this.GetComponent<Jatoba>().enabled = false;
-
+				barraTempoObject.SetActive(false);
+				indio.GetComponent<Animator>().SetBool("comer", true);
+				jatobazinho.SetActive(false);
+				Invoke("VoltaraAndar", 4);
             }
         }
         else if (Input.GetKeyDown(KeyCode.Keypad1) || Input.GetKeyDown(KeyCode.Keypad3) || Input.GetKeyDown(KeyCode.Keypad4) || Input.GetKeyDown(KeyCode.Keypad5))
@@ -60,4 +65,9 @@ public class Jatoba : MonoBehaviour {
             }
         }
     }
+
+	void VoltaraAndar(){
+		personagem.goOrStay = true;
+		indio.GetComponent<Animator>().SetBool("parar", false);
+	}
 }
