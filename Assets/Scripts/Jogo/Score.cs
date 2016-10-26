@@ -4,8 +4,8 @@ using UnityEngine.UI;
 
 public class Score : MonoBehaviour
 {
-
-    float score;
+    [HideInInspector]
+    public static float score;
     public Text scoreText;
     [HideInInspector]
     public int highScore; // para mostrar o high score é só pegar essa variável

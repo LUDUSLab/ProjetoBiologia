@@ -19,7 +19,7 @@ TextureImporter:
   serializedVersion: 2
   mipmaps:
     mipMapMode: 0
-    enableMipMap: 0
+    enableMipMap: 1
     linearTexture: 0
     correctGamma: 0
     fadeOut: 0
@@ -41,7 +41,7 @@ TextureImporter:
   textureFormat: -3
   maxTextureSize: 1024
   textureSettings:
-    filterMode: 2
+    filterMode: 1
     aniso: 16
     mipBias: -1
     wrapMode: 1
@@ -58,11 +58,14 @@ TextureImporter:
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spritePixelsToUnits: 100
   alphaIsTransparency: 1
+  spriteTessellationDetail: -1
   textureType: 8
   buildTargetSettings: []
   spriteSheet:
+    serializedVersion: 2
     sprites:
-    - name: botoes_0
+    - serializedVersion: 2
+      name: botoes_0
       rect:
         serializedVersion: 2
         x: 0
@@ -72,12 +75,10 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-      outline:
-      - - {x: -43, y: 42.5}
-        - {x: -43, y: -42.5}
-        - {x: 43, y: -42.5}
-        - {x: 43, y: 42.5}
-    - name: botoes_1
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: botoes_1
       rect:
         serializedVersion: 2
         x: 181
@@ -87,12 +88,10 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-      outline:
-      - - {x: -42.666664, y: 42.5}
-        - {x: -42.666664, y: -42.5}
-        - {x: 43.333336, y: -42.5}
-        - {x: 43.333336, y: 42.5}
-    - name: botoes_2
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: botoes_2
       rect:
         serializedVersion: 2
         x: 362
@@ -102,13 +101,10 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-      outline:
-      - - {x: -39.33333, y: 42.5}
-        - {x: -42.33333, y: 39.5}
-        - {x: -42.33333, y: -42.5}
-        - {x: 43.66667, y: -42.5}
-        - {x: 43.66667, y: 42.5}
-    - name: botoes_3
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: botoes_3
       rect:
         serializedVersion: 2
         x: 543
@@ -118,12 +114,10 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-      outline:
-      - - {x: -43, y: 42.5}
-        - {x: -43, y: -42.5}
-        - {x: 43, y: -42.5}
-        - {x: 43, y: 42.5}
-    - name: botoes_4
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: botoes_4
       rect:
         serializedVersion: 2
         x: 724
@@ -133,12 +127,10 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-      outline:
-      - - {x: -42.666656, y: 42.5}
-        - {x: -42.666656, y: -42.5}
-        - {x: 43.333344, y: -42.5}
-        - {x: 43.333344, y: 42.5}
-    - name: botoes_5
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: botoes_5
       rect:
         serializedVersion: 2
         x: 905
@@ -148,13 +140,10 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-      outline:
-      - - {x: -39.333313, y: 42.5}
-        - {x: -42.333313, y: 39.5}
-        - {x: -42.333313, y: -42.5}
-        - {x: 43.666687, y: -42.5}
-        - {x: 43.666687, y: 42.5}
-    - name: botoes_6
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: botoes_6
       rect:
         serializedVersion: 2
         x: 1086
@@ -164,12 +153,10 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-      outline:
-      - - {x: -43, y: 42.5}
-        - {x: -43, y: -42.5}
-        - {x: 43, y: -42.5}
-        - {x: 43, y: 42.5}
-    - name: botoes_7
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: botoes_7
       rect:
         serializedVersion: 2
         x: 1267
@@ -179,12 +166,10 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-      outline:
-      - - {x: -42.666626, y: 42.5}
-        - {x: -42.666626, y: -42.5}
-        - {x: 43.333374, y: -42.5}
-        - {x: 43.333374, y: 42.5}
-    - name: botoes_8
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: botoes_8
       rect:
         serializedVersion: 2
         x: 1448
@@ -194,13 +179,10 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-      outline:
-      - - {x: -39.333313, y: 42.5}
-        - {x: -42.333313, y: 39.5}
-        - {x: -42.333313, y: -42.5}
-        - {x: 43.666687, y: -42.5}
-        - {x: 43.666687, y: 42.5}
-    - name: botoes_9
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: botoes_9
       rect:
         serializedVersion: 2
         x: 1629
@@ -210,12 +192,10 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-      outline:
-      - - {x: -43, y: 42.5}
-        - {x: -43, y: -42.5}
-        - {x: 43, y: -42.5}
-        - {x: 43, y: 42.5}
-    - name: botoes_10
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: botoes_10
       rect:
         serializedVersion: 2
         x: 1810
@@ -225,12 +205,10 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
-      outline:
-      - - {x: -42.666626, y: 42.5}
-        - {x: -42.666626, y: -42.5}
-        - {x: 43.333374, y: -42.5}
-        - {x: 43.333374, y: 42.5}
-    - name: botoes_11
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: botoes_11
       rect:
         serializedVersion: 2
         x: 1991
@@ -240,12 +218,8 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
-      outline:
-      - - {x: -39.333313, y: 42.5}
-        - {x: -42.333313, y: 39.5}
-        - {x: -42.333313, y: -42.5}
-        - {x: 43.666687, y: -42.5}
-        - {x: 43.666687, y: 42.5}
+      outline: []
+      tessellationDetail: -1
     outline: []
   spritePackingTag: 
   userData: 

@@ -1,10 +1,18 @@
 ﻿using UnityEngine;
 using System.Collections;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class GameOverButtons : MonoBehaviour {
 
     public string tryAgain;
+    public Text highScoreText;
+    public Text scoreText; 
+
+    void Start()
+    {
+        ViewScore();
+    }
 
 	public void Menu()
 	{
@@ -16,9 +24,11 @@ public class GameOverButtons : MonoBehaviour {
 		SceneManager.LoadScene (tryAgain);
 	}
 
-	public void MenuTo()
-	{
-		SceneManager.LoadScene ("Menu");
-	}
+    void ViewScore()
+    {
+        highScoreText.text = PlayerPrefs.GetInt("highScore").ToString();
+        int localScore = (int)Score.score;
+        scoreText.text = localScore.ToString();
+    }
 
 }
