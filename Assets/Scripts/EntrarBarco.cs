@@ -3,7 +3,7 @@ using System.Collections;
 
 public class EntrarBarco : MonoBehaviour {
 
-	public GameObject indio, canoa;
+	public GameObject indio, canoa, fadeIn;
 	private indiozinho personagem;
 	bool barco = false;
 	public float forcinhaPraPular;
@@ -53,7 +53,13 @@ public class EntrarBarco : MonoBehaviour {
 
 	void Navegar(){
 		canoa.GetComponent<Animator>().SetBool("navegar", true);
+		indio.GetComponent<Animator>().SetBool("remar", true);
+		Invoke ("FadeIn", 7f);
 	}
+
+	void FadeIn(){
+		fadeIn.SetActive (true);
+}
 
 	/*void goEscalada()
 	{

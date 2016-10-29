@@ -4,9 +4,10 @@ using UnityEngine.SceneManagement;
 
 public class CoisaCaindo : MonoBehaviour {
 
-	public GameObject objetoCaindo, indio;
-	bool audicao = false;
+	public GameObject objetoCaindo, indio, balaoDuvida, barraTempo, folhas;
+	bool audicao = false, parar = false;
 	private indiozinho personagem;
+	public float forcinhaPraPular;
 
 	void Start () {
 		personagem = indio.GetComponent<indiozinho>();
@@ -14,47 +15,57 @@ public class CoisaCaindo : MonoBehaviour {
 
 
 	void Update () {
-		goCair();
+		
 		stopAudicao();
 		goAudicao();
 	}
 
 	void goCair()
 	{
-		if(indio.transform.position.x >= 32 && indio.transform.position.x <= 32.3)
-		{
-			objetoCaindo.SetActive(true);
-		}
+		objetoCaindo.SetActive(true);
 	}
 
 	void stopAudicao()
 	{
-		if(indio.transform.position.x >= 35 && indio.transform.position.x <= 35.1)
+		if(indio.transform.position.x >= 35 && indio.transform.position.x <= 35.9 && parar == false)
 		{
 			if(audicao == false)
 			{
+				folhas.GetComponent<Animator> ().SetBool ("mover", true);
+				barraTempo.SetActive (true);
+				balaoDuvida.SetActive (true);
 				personagem.goOrStay = false;
 				indio.GetComponent<Animator>().SetBool("parar", true);
+				indio.GetComponent<Animator>().SetBool("escutar", true);
 				audicao = true;
+				Invoke ("goCair", 1.7f);
 			}
 		}
 	}
 
 	void goAudicao()
 	{
-		if(Input.GetKeyDown(KeyCode.Keypad4))
+		if(Input.GetKeyDown(KeyCode.Keypad4)|| Input.GetKeyDown(KeyCode.D))
 		{
 			if(audicao == true)
 			{
+				Vector2 direcaoPulo = new Vector2(0.2f, 0.3f);
+				direcaoPulo.Normalize();
+				indio.GetComponent<Rigidbody2D>().AddForce(direcaoPulo * forcinhaPraPular);
+				barraTempo.SetActive (false);
+				balaoDuvida.SetActive (false);
 				audicao = false;
-				objetoCaindo.SetActive(false);
 				personagem.goOrStay = true;
+				objetoCaindo.SetActive(false);
 				indio.GetComponent<Animator>().SetBool("parar", false);
+				parar = true;
+				goCair ();
+				indio.GetComponent<Animator>().SetBool("escutar", false);
 			}
 		}
 		else if (Input.GetKeyDown(KeyCode.Keypad1) || Input.GetKeyDown(KeyCode.Keypad2) || Input.GetKeyDown(KeyCode.Keypad3) || Input.GetKeyDown(KeyCode.Keypad5))
 		{
-			if (indio.transform.position.x >= 35 && indio.transform.position.x <= 35.1)
+			if (indio.transform.position.x >= 35 && indio.transform.position.x <= 35.9)
 			{
 				SceneManager.LoadScene("gameOver");
 			}
