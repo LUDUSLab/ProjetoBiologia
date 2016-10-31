@@ -3,38 +3,37 @@ using System.Collections;
 
 public class Botoes : MonoBehaviour {
 
-    public GameObject balAud, balTato, balVisao, balPaladar, balOlfato, indio, babanana, pedrinha, moita, flor, newIndio;
+    public GameObject balAud, balTato, balVisao, balPaladar, balOlfato, indio, pedrinha, moita, flor;
     bool audi=false, tato=false, visa=false, pala=false, olfa=false;
     private indiozinho personagem;
+    public float forcinhaPraPular;
 
 
-	void Start () {
+
+    void Start () {
         personagem = indio.GetComponent<indiozinho>();
 	}
 	
 	void Update () {
-        stopA();
-        goA();
-        stopB();
-        goB();
-        stopC();
-        goC();
-        bananaCaindo();
-        stopD();
-        goD();
-        stopE();
-        goE();
-     
+        stopPassaro();
+        goAudicao();
+        stopPedra();
+        goTato();
+        stopBuraco();
+        goVisao();
+        stopUxi();
+        goNariz();
+        stopJatoba();
+        goComer();
         
 	}
 
-    void stopA ()
+    void stopPassaro ()
     {
-        if (indio.transform.position.x >= -2.72 && indio.transform.position.x <= -1)
+        if (indio.transform.position.x >= 6.9 && indio.transform.position.x <= 7.2)
         {
             if (audi == false)
             {
-				newIndio.GetComponent<Animator>().Play("ÍndioParado");
                 personagem.goOrStay = false;
                 audi = true;
                 balAud.SetActive(true);
@@ -42,9 +41,9 @@ public class Botoes : MonoBehaviour {
         }
     }
 
-    void goA()
+    void goAudicao()
     {
-        if (Input.GetKeyDown(KeyCode.Keypad1))
+        if (Input.GetKeyDown(KeyCode.Keypad4))
         {
             if(balAud.active == true)
             {
@@ -54,13 +53,12 @@ public class Botoes : MonoBehaviour {
         }
     }
 
-    void stopB()
+    void stopPedra()
     {
-        if (indio.transform.position.x >= 13 && indio.transform.position.x <= 14)
+        if (indio.transform.position.x >= 31.6 && indio.transform.position.x <= 31.7)
         {
             if (tato == false)
             {
-				newIndio.GetComponent<Animator>().Play("indioParado");
                 personagem.goOrStay = false;
                 tato = true;
                 balTato.SetActive(true);
@@ -68,9 +66,9 @@ public class Botoes : MonoBehaviour {
         }
     }
 
-    void goB()
+    void goTato()
     {
-        if (Input.GetKeyDown(KeyCode.Keypad2))
+        if (Input.GetKeyDown(KeyCode.Keypad3))
         {
             if (balTato.active == true)
             {
@@ -81,13 +79,12 @@ public class Botoes : MonoBehaviour {
         }
     }
 
-    void stopC()
+    void stopBuraco()
     {
-        if (indio.transform.position.x >= 31.9 && indio.transform.position.x <= 32.9)
+        if (indio.transform.position.x >= 31.8 && indio.transform.position.x <= 32.1)
         {
             if (visa == false)
             {
-				newIndio.GetComponent<Animator>().Play("indioParado");
                 personagem.goOrStay = false;
                 visa = true;
                 balVisao.SetActive(true);
@@ -95,26 +92,27 @@ public class Botoes : MonoBehaviour {
         }
     }
 
-    void goC()
+    void goVisao()
     {
-        if (Input.GetKeyDown(KeyCode.Keypad3))
+        if (Input.GetKeyDown(KeyCode.Keypad5))
         {
             if (balVisao.active == true)
             {
-                moita.SetActive(false);
                 balVisao.SetActive(false);
+                Vector2 direcaoPulo = new Vector2(0.8f, 0.9f);
+                direcaoPulo.Normalize();
+                indio.GetComponent<Rigidbody2D>().AddForce(direcaoPulo * forcinhaPraPular);
                 personagem.goOrStay = true;
             }
         }
     }
 
-    void stopD()
+    void stopUxi()
     {
-        if (indio.transform.position.x >= 42.58 && indio.transform.position.x <= 43.58)
+        if (indio.transform.position.x >= 68.8 && indio.transform.position.x <= 69)
         {
             if (pala == false)
             {
-				newIndio.GetComponent<Animator>().Play("indioParado");
                 personagem.goOrStay = false;
                 pala = true;
                 balPaladar.SetActive(true);
@@ -122,26 +120,24 @@ public class Botoes : MonoBehaviour {
         }
     }
 
-    void goD()
+    void goNariz()
     {
-        if (Input.GetKeyDown(KeyCode.Keypad4))
+        if (Input.GetKeyDown(KeyCode.Keypad1))
         {
             if (balPaladar.active == true)
             {
-                babanana.SetActive(false);
                 balPaladar.SetActive(false);
                 personagem.goOrStay = true;
             }
         }
     }
 
-    void stopE()
+    void stopJatoba()
     {
-        if (indio.transform.position.x >= 62.45 && indio.transform.position.x <= 63.45)
+        if (indio.transform.position.x >= 107.7 && indio.transform.position.x <= 107.9)
         {
             if (olfa == false)
             {
-				newIndio.GetComponent<Animator>().Play("indioParado");
                 personagem.goOrStay = false;
                 olfa = true;
                 balOlfato.SetActive(true);
@@ -149,9 +145,9 @@ public class Botoes : MonoBehaviour {
         }
     }
 
-    void goE()
+    void goComer()
     {
-        if (Input.GetKeyDown(KeyCode.Keypad5))
+        if (Input.GetKeyDown(KeyCode.Keypad2))
         {
             if (balOlfato.active == true)
             {
@@ -159,14 +155,6 @@ public class Botoes : MonoBehaviour {
                 balOlfato.SetActive(false);
                 personagem.goOrStay = true;
             }
-        }
-    }
-
-    void bananaCaindo()
-    {
-        if(indio.transform.position.x >= 37.77 && indio.transform.position.x <= 38.77)
-        {
-            babanana.SetActive(true);
         }
     }
 }

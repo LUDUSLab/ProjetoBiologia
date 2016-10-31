@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using System.Collections;
+using UnityEngine.SceneManagement;
 
 public class EntrarBarco : MonoBehaviour {
 
@@ -14,11 +15,9 @@ public class EntrarBarco : MonoBehaviour {
 	}
 	
 	// Update is called once per frame
-	void Update () {
-
+	void Update ()
+    {
 		stopTato();
-		//goEscalada();
-	
 	}
 
 	void stopTato()
@@ -54,27 +53,17 @@ public class EntrarBarco : MonoBehaviour {
 	void Navegar(){
 		canoa.GetComponent<Animator>().SetBool("navegar", true);
 		indio.GetComponent<Animator>().SetBool("remar", true);
-		Invoke ("FadeIn", 7f);
+		Invoke ("FadeIn", 3f);
 	}
 
 	void FadeIn(){
 		fadeIn.SetActive (true);
-}
+        Invoke("Pontinhos", 1.5f);
 
-	/*void goEscalada()
-	{
-		if (Input.GetKeyDown(KeyCode.Keypad3) || Input.GetKeyDown(KeyCode.Q))
-		{
-			
-			Vector2 direcaoPulo = new Vector2(0.1f, 0.7f);
-			direcaoPulo.Normalize();
-			indio.GetComponent<Rigidbody2D>().AddForce(direcaoPulo * forcinhaPraPular);
-			this.GetComponent<Escalada>().enabled = false;
-			indio.GetComponent<Animator>().SetBool("pulando", true);
-			//personagem.goOrStay = true;
-			Invoke("VoltaraAndar", 0.6f);
+    }
 
-		}
-
-	}*/
+    void Pontinhos()
+    {
+        SceneManager.LoadScene("Pontuacao");
+    }
 }
