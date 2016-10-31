@@ -8,9 +8,6 @@ public class Cipo : MonoBehaviour {
     private indiozinho personagem;
     bool visao = false, tato = false;
     public float forcinhaPraPular;
-	public float tempoBarrinha;
-	private float tempoInicial;
-
 
     void Start () {
         personagem = indio.GetComponent<indiozinho>();
@@ -35,7 +32,6 @@ public class Cipo : MonoBehaviour {
 				personagem.goOrStay = false;
 				balaoDuvida.SetActive (true);
 				indio.GetComponent<Animator>().SetBool("parar", true);
-                barraTempoObject.SetActive(true);
 				visao = true;
             }
         }
@@ -45,12 +41,12 @@ public class Cipo : MonoBehaviour {
     {
 		if (Input.GetKeyDown(KeyCode.Keypad5)|| Input.GetKeyDown(KeyCode.W))
         {
-			feedBackVision.SetActive(false);
-			cipoSinlhueta.SetActive(false);
-            cipoVerde.SetActive(true);
-            personagem.goOrStay = true;
-			barraTempoObject.SetActive(false);
-			indio.GetComponent<Animator>().SetBool("parar", false);
+                feedBackVision.SetActive(false);
+                cipoSinlhueta.SetActive(false);
+                cipoVerde.SetActive(true);
+                personagem.goOrStay = true;
+                barraTempoObject.SetActive(false);
+                indio.GetComponent<Animator>().SetBool("parar", false);
         }
         else if (Input.GetKeyDown(KeyCode.Keypad1) || Input.GetKeyDown(KeyCode.Keypad2) || Input.GetKeyDown(KeyCode.Keypad3) || Input.GetKeyDown(KeyCode.Keypad4))
         {

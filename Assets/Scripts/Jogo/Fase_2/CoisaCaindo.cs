@@ -15,7 +15,6 @@ public class CoisaCaindo : MonoBehaviour {
 
 
 	void Update () {
-		
 		stopAudicao();
 		goAudicao();
 	}
@@ -27,7 +26,7 @@ public class CoisaCaindo : MonoBehaviour {
 
 	void stopAudicao()
 	{
-		if(indio.transform.position.x >= 35 && indio.transform.position.x <= 35.9 && parar == false)
+		if(indio.transform.position.x >= 35 && indio.transform.position.x <= 35.5 && parar == false)
 		{
 			if(audicao == false)
 			{
@@ -59,13 +58,12 @@ public class CoisaCaindo : MonoBehaviour {
 				objetoCaindo.SetActive(false);
 				indio.GetComponent<Animator>().SetBool("parar", false);
 				parar = true;
-				goCair ();
 				indio.GetComponent<Animator>().SetBool("escutar", false);
 			}
 		}
 		else if (Input.GetKeyDown(KeyCode.Keypad1) || Input.GetKeyDown(KeyCode.Keypad2) || Input.GetKeyDown(KeyCode.Keypad3) || Input.GetKeyDown(KeyCode.Keypad5))
 		{
-			if (indio.transform.position.x >= 35 && indio.transform.position.x <= 35.9)
+			if (indio.transform.position.x >= 35 && indio.transform.position.x <= 35.5)
 			{
 				SceneManager.LoadScene("gameOver");
 			}

@@ -21,15 +21,15 @@ AnimationClip:
       m_Curve:
       - time: 0
         value: 0
-        inSlope: 1.3333334
-        outSlope: 1.3333334
-        tangentMode: 10
-      - time: 0.75
-        value: 1
         inSlope: 0.6666667
         outSlope: 0.6666667
         tangentMode: 10
-      - time: 0.9166667
+      - time: 1.5
+        value: 1
+        inSlope: 0.33333334
+        outSlope: 0.33333334
+        tangentMode: 10
+      - time: 1.8333334
         value: 1
         inSlope: 0
         outSlope: 0
@@ -42,7 +42,7 @@ AnimationClip:
     classID: 114
     script: {fileID: -765806418, guid: f5f67c52d1564df4a8936ccd202a3bd8, type: 3}
   m_PPtrCurves: []
-  m_SampleRate: 12
+  m_SampleRate: 6
   m_WrapMode: 0
   m_Bounds:
     m_Center: {x: 0, y: 0, z: 0}
@@ -61,7 +61,7 @@ AnimationClip:
     m_AdditiveReferencePoseClip: {fileID: 0}
     m_AdditiveReferencePoseTime: 0
     m_StartTime: 0
-    m_StopTime: 0.9166667
+    m_StopTime: 1.8333334
     m_OrientationOffsetY: 0
     m_Level: 0
     m_CycleOffset: 0
@@ -82,15 +82,15 @@ AnimationClip:
       m_Curve:
       - time: 0
         value: 0
-        inSlope: 1.3333334
-        outSlope: 1.3333334
-        tangentMode: 10
-      - time: 0.75
-        value: 1
         inSlope: 0.6666667
         outSlope: 0.6666667
         tangentMode: 10
-      - time: 0.9166667
+      - time: 1.5
+        value: 1
+        inSlope: 0.33333334
+        outSlope: 0.33333334
+        tangentMode: 10
+      - time: 1.8333334
         value: 1
         inSlope: 0
         outSlope: 0
