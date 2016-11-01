@@ -59,7 +59,8 @@ public class CoisaCaindo : MonoBehaviour {
 				indio.GetComponent<Animator>().SetBool("parar", false);
 				parar = true;
 				indio.GetComponent<Animator>().SetBool("escutar", false);
-			}
+                GetComponent<Score>().Addscore();
+            }
 		}
 		else if (Input.GetKeyDown(KeyCode.Keypad1) || Input.GetKeyDown(KeyCode.Keypad2) || Input.GetKeyDown(KeyCode.Keypad3) || Input.GetKeyDown(KeyCode.Keypad5))
 		{

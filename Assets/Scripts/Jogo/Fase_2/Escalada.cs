@@ -48,6 +48,7 @@ public class Escalada : MonoBehaviour {
                 indio.GetComponent<Animator>().SetBool("pulando", true);
                 //personagem.goOrStay = true;
                 Invoke("VoltaraAndar", 0.6f);
+				GetComponent<Score>().Addscore();
             }
         }
         else if (Input.GetKeyDown(KeyCode.Keypad1) || Input.GetKeyDown(KeyCode.Keypad2) || Input.GetKeyDown(KeyCode.Keypad4) || Input.GetKeyDown(KeyCode.Keypad5))

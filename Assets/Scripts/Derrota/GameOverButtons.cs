@@ -12,6 +12,7 @@ public class GameOverButtons : MonoBehaviour {
 
     void Start()
     {
+        Score.FinalScore();
         ViewScore();
     }
 
@@ -22,6 +23,7 @@ public class GameOverButtons : MonoBehaviour {
 
 	public void TryAgain()
 	{
+
 		SceneManager.LoadScene (tryAgain);
 	}
 

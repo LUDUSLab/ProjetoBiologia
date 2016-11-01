@@ -58,12 +58,12 @@ public class EntrarBarco : MonoBehaviour {
 
 	void FadeIn(){
 		fadeIn.SetActive (true);
-        Invoke("Pontinhos", 1.5f);
+        Invoke("GameOver", 1.5f);
 
     }
 
-    void Pontinhos()
+    void GameOver()
     {
-        SceneManager.LoadScene("Pontuacao");
+        SceneManager.LoadScene("GameOver");
     }
 }
