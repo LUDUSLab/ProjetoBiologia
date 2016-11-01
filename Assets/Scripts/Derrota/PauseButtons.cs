@@ -19,7 +19,7 @@ public class PauseButtons : MonoBehaviour {
 
 	public void SairJogo()
 	{
-		//SceneManager.LoadScene ("SairdoJogo");
+		sairMesmo.SetActive(true);
 	}
 
 }

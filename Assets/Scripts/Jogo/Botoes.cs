@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using System.Collections;
+using System;
 
 public class Botoes : MonoBehaviour {
 
@@ -25,7 +26,6 @@ public class Botoes : MonoBehaviour {
         goNariz();
         stopJatoba();
         goComer();
-        
 	}
 
     void stopPassaro ()
@@ -37,6 +37,8 @@ public class Botoes : MonoBehaviour {
                 personagem.goOrStay = false;
                 audi = true;
                 balAud.SetActive(true);
+                indio.GetComponent<Animator>().SetBool("parar", true);
+                indio.GetComponent<Animator>().SetBool("escutar", true);
             }
         }
     }
@@ -49,19 +51,22 @@ public class Botoes : MonoBehaviour {
             {
                 balAud.SetActive(false);
                 personagem.goOrStay = true;
+                indio.GetComponent<Animator>().SetBool("parar", false);
+                indio.GetComponent<Animator>().SetBool("escutar", false);
             }
         }
     }
 
     void stopPedra()
     {
-        if (indio.transform.position.x >= 31.3 && indio.transform.position.x <= 31.5)
+        if (indio.transform.position.x >= 31.5 && indio.transform.position.x <= 31.7)
         {
             if (tato == false)
             {
                 personagem.goOrStay = false;
                 tato = true;
                 balTato.SetActive(true);
+                indio.GetComponent<Animator>().SetBool("parar", true);
             }
         }
     }
@@ -72,9 +77,10 @@ public class Botoes : MonoBehaviour {
         {
             if (tato == true)
             {
-                pedrinha.SetActive(false);
+                //pedrinha.SetActive(false);
                 balTato.SetActive(false);
                 personagem.goOrStay = true;
+                indio.GetComponent<Animator>().SetBool("parar", false);
             }
         }
     }
@@ -88,8 +94,14 @@ public class Botoes : MonoBehaviour {
                 personagem.goOrStay = false;
                 visa = true;
                 balVisao.SetActive(true);
+                indio.GetComponent<Animator>().SetBool("parar", true);
             }
         }
+    }
+
+    private void invoke(string v)
+    {
+        throw new NotImplementedException();
     }
 
     void goVisao()
@@ -98,11 +110,13 @@ public class Botoes : MonoBehaviour {
         {
             if (balVisao.active == true)
             {
+                Debug.Log("teste");
                 balVisao.SetActive(false);
                 Vector2 direcaoPulo = new Vector2(0.8f, 0.9f);
                 direcaoPulo.Normalize();
                 indio.GetComponent<Rigidbody2D>().AddForce(direcaoPulo * forcinhaPraPular);
-                personagem.goOrStay = true;
+                //personagem.goOrStay = true;
+                Invoke("VoltaraAndar", 0.8f);
             }
         }
     }
@@ -116,6 +130,8 @@ public class Botoes : MonoBehaviour {
                 personagem.goOrStay = false;
                 pala = true;
                 balPaladar.SetActive(true);
+                indio.GetComponent<Animator>().SetBool("parar", true);
+                indio.GetComponent<Animator>().SetBool("cheirar", true);
             }
         }
     }
@@ -128,6 +144,8 @@ public class Botoes : MonoBehaviour {
             {
                 balPaladar.SetActive(false);
                 personagem.goOrStay = true;
+                indio.GetComponent<Animator>().SetBool("parar", false);
+                indio.GetComponent<Animator>().SetBool("cheirar", false);
             }
         }
     }
@@ -141,6 +159,7 @@ public class Botoes : MonoBehaviour {
                 personagem.goOrStay = false;
                 olfa = true;
                 balOlfato.SetActive(true);
+                indio.GetComponent<Animator>().SetBool("parar", true);
             }
         }
     }
@@ -154,7 +173,14 @@ public class Botoes : MonoBehaviour {
                 flor.SetActive(false);
                 balOlfato.SetActive(false);
                 personagem.goOrStay = true;
+                indio.GetComponent<Animator>().SetBool("parar", false);
             }
         }
+    }
+
+    void VoltaraAndar()
+    {
+        personagem.goOrStay = true;
+        indio.GetComponent<Animator>().SetBool("parar", false);
     }
 }
