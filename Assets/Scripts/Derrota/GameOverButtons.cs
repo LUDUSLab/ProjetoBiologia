@@ -5,7 +5,7 @@ using UnityEngine.UI;
 
 public class GameOverButtons : MonoBehaviour {
 
-    private string tryAgain;
+    //public string tryAgain;
     public Text highScoreText;
     public Text scoreText;
     public GameObject hudSair;
@@ -21,10 +21,10 @@ public class GameOverButtons : MonoBehaviour {
 		SceneManager.LoadScene ("Menu");
 	}
 
-	public void TryAgain()
+	public void CenarioBonito()
 	{
 
-		SceneManager.LoadScene (tryAgain);
+		SceneManager.LoadScene ("CenarioBonito");
 	}
 
     public void Sair()
