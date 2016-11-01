@@ -33,6 +33,7 @@ public class Cipo : MonoBehaviour {
 				balaoDuvida.SetActive (true);
 				indio.GetComponent<Animator>().SetBool("parar", true);
 				visao = true;
+
             }
         }
     }
@@ -47,6 +48,7 @@ public class Cipo : MonoBehaviour {
                 personagem.goOrStay = true;
                 barraTempoObject.SetActive(false);
                 indio.GetComponent<Animator>().SetBool("parar", false);
+                GetComponent<Score>().Addscore();
         }
         else if (Input.GetKeyDown(KeyCode.Keypad1) || Input.GetKeyDown(KeyCode.Keypad2) || Input.GetKeyDown(KeyCode.Keypad3) || Input.GetKeyDown(KeyCode.Keypad4))
         {
@@ -89,6 +91,7 @@ public class Cipo : MonoBehaviour {
 				//personagem.goOrStay = true;
 				indio.GetComponent<Animator>().SetBool("pulando", true);
 				Invoke("VoltaraAndar", 0.8f);
+                GetComponent<Score>().Addscore();
             }
         }
         else if (Input.GetKeyDown(KeyCode.Keypad1) || Input.GetKeyDown(KeyCode.Keypad2) || Input.GetKeyDown(KeyCode.Keypad4) || Input.GetKeyDown(KeyCode.Keypad5))
