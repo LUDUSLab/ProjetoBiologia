@@ -55,7 +55,7 @@ public class Botoes : MonoBehaviour {
 
     void stopPedra()
     {
-        if (indio.transform.position.x >= 31.6 && indio.transform.position.x <= 31.7)
+        if (indio.transform.position.x >= 31.3 && indio.transform.position.x <= 31.5)
         {
             if (tato == false)
             {
@@ -70,10 +70,10 @@ public class Botoes : MonoBehaviour {
     {
         if (Input.GetKeyDown(KeyCode.Keypad3))
         {
-            if (balTato.active == true)
+            if (tato == true)
             {
-                balTato.SetActive(false);
                 pedrinha.SetActive(false);
+                balTato.SetActive(false);
                 personagem.goOrStay = true;
             }
         }
@@ -81,7 +81,7 @@ public class Botoes : MonoBehaviour {
 
     void stopBuraco()
     {
-        if (indio.transform.position.x >= 31.8 && indio.transform.position.x <= 32.1)
+        if (indio.transform.position.x >= 51.6 && indio.transform.position.x <= 51.9)
         {
             if (visa == false)
             {
