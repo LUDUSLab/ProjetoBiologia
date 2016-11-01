@@ -172,8 +172,8 @@ public class Botoes : MonoBehaviour {
             {
                 flor.SetActive(false);
                 balOlfato.SetActive(false);
-                personagem.goOrStay = true;
-                indio.GetComponent<Animator>().SetBool("parar", false);
+                indio.GetComponent<Animator>().SetBool("comer", true);
+                Invoke("VoltaraAndar", 1.5f);
             }
         }
     }
@@ -182,5 +182,6 @@ public class Botoes : MonoBehaviour {
     {
         personagem.goOrStay = true;
         indio.GetComponent<Animator>().SetBool("parar", false);
+        indio.GetComponent<Animator>().SetBool("comer", false);
     }
 }

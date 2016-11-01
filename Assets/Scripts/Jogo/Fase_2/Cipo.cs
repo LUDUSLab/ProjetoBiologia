@@ -50,7 +50,7 @@ public class Cipo : MonoBehaviour {
         }
         else if (Input.GetKeyDown(KeyCode.Keypad1) || Input.GetKeyDown(KeyCode.Keypad2) || Input.GetKeyDown(KeyCode.Keypad3) || Input.GetKeyDown(KeyCode.Keypad4))
         {
-            if (indio.transform.position.x >= 16 && indio.transform.position.x <= 16.9)
+            if (indio.transform.position.x >= 20 && indio.transform.position.x <= 20.9)
             {
                 SceneManager.LoadScene("gameOver");
             }

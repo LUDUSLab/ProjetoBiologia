@@ -4,7 +4,7 @@ using UnityEngine.SceneManagement;
 
 public class MenuButtons : MonoBehaviour {
 
-
+    public GameObject hudSair;
 
     public void Play()
     {
@@ -13,7 +13,22 @@ public class MenuButtons : MonoBehaviour {
 
 	public void Info()
 	{
-		SceneManager.LoadScene ("Informations");
+		SceneManager.LoadScene ("Informacoes");
 	}
+
+    public void SairdoJogo()
+    {
+        hudSair.SetActive(true);
+    }
+
+    public void Sim()
+    {
+        Application.Quit();
+    }
+
+    public void Nao()
+    {
+        hudSair.SetActive(false);
+    }
 
 }

@@ -5,9 +5,10 @@ using UnityEngine.UI;
 
 public class GameOverButtons : MonoBehaviour {
 
-    public string tryAgain;
+    private string tryAgain;
     public Text highScoreText;
-    public Text scoreText; 
+    public Text scoreText;
+    public GameObject hudSair;
 
     void Start()
     {
@@ -23,6 +24,21 @@ public class GameOverButtons : MonoBehaviour {
 	{
 		SceneManager.LoadScene (tryAgain);
 	}
+
+    public void Sair()
+    {
+        hudSair.SetActive(true);
+    }
+
+    public void Sim()
+    {
+        Application.Quit();
+    }
+
+    public void Nao()
+    {
+        hudSair.SetActive(false);
+    }
 
     void ViewScore()
     {
