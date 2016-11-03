@@ -4,11 +4,12 @@ using UnityEngine.SceneManagement;
 
 public class Canoa : MonoBehaviour {
 
-	public float velo;
+	public float velo, forcinhaPraPular;
 	private indiozinho personagem;
 	public bool goOrStay = true;
-	public GameObject canoa, indio, balaoDuvida;
+	public GameObject canoa, indio, balaoDuvida, soulIndio;
 	bool tato = false;
+	bool Gatilho = true;
 
 	void Start(){
 		personagem = indio.GetComponent<indiozinho>();
@@ -19,6 +20,7 @@ public class Canoa : MonoBehaviour {
 		Andando();
 		stopRemo();
 		goRemar();
+		SairdoBarco();
 	}
 
 	void Andando()
@@ -33,7 +35,8 @@ public class Canoa : MonoBehaviour {
 	}
 
 	void stopRemo(){
-		if(indio.transform.position.x >=27.5 && indio.transform.position.x <=27.9)
+		if(indio.transform.position.x >=11.5 && indio.transform.position.x <=11.9 || indio.transform.position.x >=23.5 && indio.transform.position.x <=23.9
+			|| indio.transform.position.x >=35.5 && indio.transform.position.x <=35.9)
 		{
 			if(tato == false)
 			{
@@ -50,20 +53,56 @@ public class Canoa : MonoBehaviour {
 	{
 		if (Input.GetKeyDown(KeyCode.Keypad3) || Input.GetKeyDown(KeyCode.Q))
 		{
-			if (indio.transform.position.x >= 27.5 && indio.transform.position.x <= 27.9)
+			if (indio.transform.position.x >= 11.5 && indio.transform.position.x <= 11.9 || indio.transform.position.x >=23.5 && indio.transform.position.x <=23.9
+				|| indio.transform.position.x >=35.5 && indio.transform.position.x <=35.9)
 			{
 				balaoDuvida.SetActive(false);
 				goOrStay = true;
-				GetComponent<Score>().Addscore();
+				indio.GetComponent<Animator>().SetBool("remando", true);
+				//GetComponent<Score>().Addscore();
+				Invoke("AtivarTato", 3f);
+
 			}
 		}
 		else if (Input.GetKeyDown(KeyCode.Keypad1) || Input.GetKeyDown(KeyCode.Keypad2) || Input.GetKeyDown(KeyCode.Keypad4) || Input.GetKeyDown(KeyCode.Keypad5))
 		{
-			if (indio.transform.position.x >= 27.5 && indio.transform.position.x <= 27.9)
+			if (indio.transform.position.x >= 11.5 && indio.transform.position.x <= 11.9 || indio.transform.position.x >=23.5 && indio.transform.position.x <=23.9
+				|| indio.transform.position.x >=35.5 && indio.transform.position.x <=35.9)
 			{
 				SceneManager.LoadScene("gameOver");
 			}
 		}
 
+	}
+
+	void AtivarTato(){
+		tato = false;
+
+	}
+
+	void SairdoBarco(){
+		
+		if(canoa.transform.position.x >=52.2 && canoa.transform.position.x <=52.4)
+		{
+			if(Gatilho == true){
+				goOrStay = false;
+				indio.transform.SetParent(soulIndio.transform);
+				indio.GetComponent<Animator>().SetBool("parar", false);
+				indio.GetComponent<Animator>().SetBool("pulando", true);
+				Vector2 direcaoPulo = new Vector2(0.5f, 0.7f);
+				direcaoPulo.Normalize();
+				indio.GetComponent<Rigidbody2D>().AddForce(direcaoPulo * forcinhaPraPular);
+				indio.GetComponent<Animator> ().SetBool ("remar", false);
+			Invoke("VoltaraAndar", 2);
+				Gatilho = false;	
+			}
+		}
+
+
+	}
+
+	void VoltaraAndar(){
+	
+		personagem.goOrStay = true;
 	}
 }
