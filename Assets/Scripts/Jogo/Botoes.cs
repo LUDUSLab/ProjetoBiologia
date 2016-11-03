@@ -46,7 +46,7 @@ public class Botoes : MonoBehaviour {
 
     void goAudicao()
     {
-        if (Input.GetKeyDown(KeyCode.Keypad4))
+		if (Input.GetKeyDown(KeyCode.Keypad4)|| Input.GetKeyDown(KeyCode.R))
         {
             if(balAud.active == true)
             {
@@ -74,7 +74,7 @@ public class Botoes : MonoBehaviour {
 
     void goTato()
     {
-        if (Input.GetKeyDown(KeyCode.Keypad3))
+		if (Input.GetKeyDown(KeyCode.Keypad3)|| Input.GetKeyDown(KeyCode.E))
         {
             if (tato == true)
             {
@@ -107,7 +107,7 @@ public class Botoes : MonoBehaviour {
 
     void goVisao()
     {
-        if (Input.GetKeyDown(KeyCode.Keypad5))
+		if (Input.GetKeyDown(KeyCode.Keypad5)|| Input.GetKeyDown(KeyCode.T))
         {
             if (balVisao.active == true)
             {
@@ -139,7 +139,7 @@ public class Botoes : MonoBehaviour {
 
     void goNariz()
     {
-        if (Input.GetKeyDown(KeyCode.Keypad1))
+		if (Input.GetKeyDown(KeyCode.Keypad1)|| Input.GetKeyDown(KeyCode.Q))
         {
             if (balPaladar.active == true)
             {
@@ -167,7 +167,7 @@ public class Botoes : MonoBehaviour {
 
     void goComer()
     {
-        if (Input.GetKeyDown(KeyCode.Keypad2))
+		if (Input.GetKeyDown(KeyCode.Keypad2)|| Input.GetKeyDown(KeyCode.W))
         {
             if (balOlfato.active == true)
             {
