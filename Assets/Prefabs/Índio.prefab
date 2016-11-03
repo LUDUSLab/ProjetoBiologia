@@ -158,7 +158,7 @@ GameObject:
   - 58: {fileID: 58000011589771966}
   - 212: {fileID: 212000011446983496}
   m_Layer: 0
-  m_Name: "\xCDndio"
+  m_Name: "I\u0301ndio"
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
