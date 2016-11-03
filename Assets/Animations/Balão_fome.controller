@@ -5,7 +5,7 @@ AnimatorController:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
-  m_Name: "Bala\u0303o_fome"
+  m_Name: "Bal\xE3o_fome"
   serializedVersion: 5
   m_AnimatorParameters: []
   m_AnimatorLayers:

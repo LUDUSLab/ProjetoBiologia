@@ -5,7 +5,7 @@ using UnityEngine.SceneManagement;
 
 public class Botoes : MonoBehaviour {
 
-    public GameObject balAud, balTato, balVisao, balPaladar, balOlfato, indio, pedrinha, moita, flor;
+    public GameObject balAud, balTato, balVisao, balPaladar, balOlfato, indio, pedrinha, moita, flor, botoes;
     bool audi=false, tato=false, visa=false, pala=false, olfa=false;
     private indiozinho personagem;
     public float forcinhaPraPular;
@@ -35,6 +35,7 @@ public class Botoes : MonoBehaviour {
         {
             if (audi == false)
             {
+                botoes.GetComponent<Animator>().Play("ouvido_Tuto");
                 personagem.goOrStay = false;
                 audi = true;
                 balAud.SetActive(true);
@@ -50,6 +51,7 @@ public class Botoes : MonoBehaviour {
         {
             if(balAud.active == true)
             {
+                botoes.GetComponent<Animator>().Play("Anim_Tuto");
                 balAud.SetActive(false);
                 personagem.goOrStay = true;
                 indio.GetComponent<Animator>().SetBool("parar", false);
@@ -64,6 +66,7 @@ public class Botoes : MonoBehaviour {
         {
             if (tato == false)
             {
+                botoes.GetComponent<Animator>().Play("mao_Tuto");
                 personagem.goOrStay = false;
                 tato = true;
                 balTato.SetActive(true);
@@ -78,6 +81,7 @@ public class Botoes : MonoBehaviour {
         {
             if (tato == true)
             {
+                botoes.GetComponent<Animator>().Play("Anim_Tuto");
                 //pedrinha.SetActive(false);
                 balTato.SetActive(false);
                 personagem.goOrStay = true;
@@ -92,6 +96,7 @@ public class Botoes : MonoBehaviour {
         {
             if (visa == false)
             {
+                botoes.GetComponent<Animator>().Play("olhos_Tuto");
                 personagem.goOrStay = false;
                 visa = true;
                 balVisao.SetActive(true);
@@ -111,6 +116,7 @@ public class Botoes : MonoBehaviour {
         {
             if (balVisao.active == true)
             {
+                botoes.GetComponent<Animator>().Play("Anim_Tuto");
                 Debug.Log("teste");
                 balVisao.SetActive(false);
                 Vector2 direcaoPulo = new Vector2(0.8f, 0.9f);
@@ -128,6 +134,7 @@ public class Botoes : MonoBehaviour {
         {
             if (pala == false)
             {
+                botoes.GetComponent<Animator>().Play("nariz_Tuto");
                 personagem.goOrStay = false;
                 pala = true;
                 balPaladar.SetActive(true);
@@ -143,6 +150,7 @@ public class Botoes : MonoBehaviour {
         {
             if (balPaladar.active == true)
             {
+                botoes.GetComponent<Animator>().Play("Anim_Tuto");
                 balPaladar.SetActive(false);
                 personagem.goOrStay = true;
                 indio.GetComponent<Animator>().SetBool("parar", false);
@@ -157,6 +165,7 @@ public class Botoes : MonoBehaviour {
         {
             if (olfa == false)
             {
+                botoes.GetComponent<Animator>().Play("boca_Tutp");
                 personagem.goOrStay = false;
                 olfa = true;
                 balOlfato.SetActive(true);
@@ -171,6 +180,7 @@ public class Botoes : MonoBehaviour {
         {
             if (balOlfato.active == true)
             {
+                botoes.GetComponent<Animator>().Play("Anim_Tuto");
                 flor.SetActive(false);
                 balOlfato.SetActive(false);
                 indio.GetComponent<Animator>().SetBool("comer", true);

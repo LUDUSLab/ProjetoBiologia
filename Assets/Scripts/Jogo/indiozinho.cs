@@ -6,7 +6,6 @@ public class indiozinho : MonoBehaviour {
 	public float velo;
     public bool goOrStay = true;
 	public GameObject indi;
-	public string passos = "event:/passos";
 
     void Update () {
         Andando();
@@ -14,11 +13,11 @@ public class indiozinho : MonoBehaviour {
 
 	void Andando()
 	{
-		if (goOrStay) {
-			transform.Translate (Vector2.right * velo * Time.deltaTime);
-			indi.GetComponent<Animator> ().Play ("indioAndando");
-			//Debug.Log("andando");
-		}
-			
-	}
+        if (goOrStay)
+        {
+            transform.Translate(Vector2.right * velo * Time.deltaTime);
+			indi.GetComponent<Animator>().Play("indioAndando");
+            //Debug.Log("andando");
+        }
+    }
 }

@@ -14,7 +14,7 @@ MonoBehaviour:
   HasSourceProject: 1
   HasPlatforms: 1
   SourceProjectPath: /Users/ludus1/Desktop/Uirapuru/Uirapuru.fspro
-  SourceBankPath: /Users/ludus1/Desktop/Uirapuru/Build
+  SourceBankPath: /Users/ludus1/Desktop/Uirapuru\Build
   AutomaticEventLoading: 1
   AutomaticSampleLoading: 0
   ImportType: 0
@@ -54,5 +54,5 @@ MonoBehaviour:
   - Platform: 2
     Value: 32
   Plugins: []
-  MasterBank: Master Bank
+  MasterBank: 
   Banks: []

@@ -4,11 +4,10 @@ using UnityEngine.SceneManagement;
 
 public class Escalada : MonoBehaviour {
 
-    public GameObject indio, balaoDuvida;
+    public GameObject indio, balaoDuvida, barraTempo;
     bool tato = false;
     private indiozinho personagem;
 	public float forcinhaPraPular;
-	public string pulo = "event:/pulo";
 
 	// Use this for initialization
 	void Start () {
@@ -28,6 +27,7 @@ public class Escalada : MonoBehaviour {
             if(tato == false)
             {
 				balaoDuvida.SetActive (true);
+                barraTempo.SetActive(true);
                 personagem.goOrStay = false;
                 indio.GetComponent<Animator>().SetBool("parar", true);
                 tato = true;
@@ -37,12 +37,12 @@ public class Escalada : MonoBehaviour {
 
 	void goEscalada()
 	{
-		if (Input.GetKeyDown(KeyCode.Keypad3) || Input.GetKeyDown(KeyCode.Q))
+		if (Input.GetKeyDown(KeyCode.Alpha3))
         {
             if (indio.transform.position.x >= 4.3 && indio.transform.position.x <= 4.7)
             {
-				FMODUnity.RuntimeManager.PlayOneShot (pulo);
                 balaoDuvida.SetActive(false);
+                barraTempo.SetActive(false);
                 Vector2 direcaoPulo = new Vector2(0.1f, 0.7f);
                 direcaoPulo.Normalize();
                 indio.GetComponent<Rigidbody2D>().AddForce(direcaoPulo * forcinhaPraPular);
@@ -53,7 +53,7 @@ public class Escalada : MonoBehaviour {
 				GetComponent<Score>().Addscore();
             }
         }
-        else if (Input.GetKeyDown(KeyCode.Keypad1) || Input.GetKeyDown(KeyCode.Keypad2) || Input.GetKeyDown(KeyCode.Keypad4) || Input.GetKeyDown(KeyCode.Keypad5))
+        else if (Input.GetKeyDown(KeyCode.Alpha1) || Input.GetKeyDown(KeyCode.Alpha2) || Input.GetKeyDown(KeyCode.Alpha4) || Input.GetKeyDown(KeyCode.Alpha5))
         {
             if (indio.transform.position.x >= 4.3 && indio.transform.position.x <= 4.7)
             {
