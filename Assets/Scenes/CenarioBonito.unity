@@ -1169,6 +1169,20 @@ Prefab:
       propertyPath: TempoDaBarra
       value: 3
       objectReference: {fileID: 0}
+    - target: {fileID: 1000010431990858, guid: d26d52129483af54393576a0a42caf84, type: 2}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 224000013647181766, guid: d26d52129483af54393576a0a42caf84,
+        type: 2}
+      propertyPath: m_AnchorMax.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 224000011488258550, guid: d26d52129483af54393576a0a42caf84,
+        type: 2}
+      propertyPath: m_AnchorMax.y
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: d26d52129483af54393576a0a42caf84, type: 2}
   m_IsPrefabParent: 0
@@ -1276,7 +1290,7 @@ MonoBehaviour:
   indio: {fileID: 924682056}
   cipoVerde: {fileID: 1930635426}
   balaoDuvida: {fileID: 1897508501}
-  barraTempoObject: {fileID: 0}
+  barraTempoObject: {fileID: 1354910044}
   cipoSinlhueta: {fileID: 424191471}
   feedBackVision: {fileID: 1191675100}
   forcinhaPraPular: 400
@@ -1323,7 +1337,7 @@ MonoBehaviour:
   jatobaInvisivel: {fileID: 139052765}
   indio: {fileID: 924682056}
   balaoDuvida: {fileID: 1897508501}
-  barraTempoObject: {fileID: 0}
+  barraTempoObject: {fileID: 1354910044}
   balaoFome: {fileID: 239220526}
   tempoBarrinha: 2
 --- !u!114 &465330998
@@ -1380,7 +1394,7 @@ MonoBehaviour:
   objetoCaindo: {fileID: 1482106754}
   indio: {fileID: 924682056}
   balaoDuvida: {fileID: 1897508501}
-  barraTempo: {fileID: 0}
+  barraTempo: {fileID: 1354910044}
   folhas: {fileID: 1498536856}
   forcinhaPraPular: 140
 --- !u!114 &465331002
@@ -2718,7 +2732,6 @@ MonoBehaviour:
   - {fileID: 396137358}
   - {fileID: 1349967078}
   - {fileID: 1582005930}
-  - {fileID: 1582005930}
   - {fileID: 691025066}
   - {fileID: 1430877104}
   - {fileID: 1398742895}
@@ -3716,6 +3729,11 @@ Transform:
   m_PrefabParentObject: {fileID: 4000013609053376, guid: 19256d2acd637834486c458d4ac4aa03,
     type: 2}
   m_PrefabInternal: {fileID: 1077695327}
+--- !u!1 &1354910044 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 1000010431990858, guid: d26d52129483af54393576a0a42caf84,
+    type: 2}
+  m_PrefabInternal: {fileID: 434300938}
 --- !u!1 &1365236678
 GameObject:
   m_ObjectHideFlags: 0
