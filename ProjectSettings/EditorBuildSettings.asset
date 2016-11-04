@@ -21,3 +21,5 @@ EditorBuildSettings:
     path: Assets/Scenes/Informacoes.unity
   - enabled: 1
     path: Assets/Scenes/Fase3.unity
+  - enabled: 1
+    path: Assets/Scenes/LogoLudus.unity

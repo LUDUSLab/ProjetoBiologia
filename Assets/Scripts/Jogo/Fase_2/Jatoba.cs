@@ -4,7 +4,7 @@ using UnityEngine.SceneManagement;
 
 public class Jatoba : MonoBehaviour {
 
-	public GameObject jatobazinho, jatobazinhoConcreto, jatobaInvisivel, indio, balaoDuvida, 	barraTempoObject, balaoFome;
+	public GameObject jatobazinho, jatobazinhoConcreto, jatobaInvisivel, indio, balaoDuvida,barraTempoObject, balaoFome, fadeIn;
     private indiozinho personagem;
     bool paladar = false, nariz = false, parar = false;
 	public float tempoBarrinha;
@@ -49,7 +49,7 @@ public class Jatoba : MonoBehaviour {
 
 	void goCheirar()
 	{
-		if(Input.GetKeyDown(KeyCode.Alpha1))
+		if(Input.GetKeyDown(KeyCode.Alpha1) || Input.GetKeyDown(KeyCode.Keypad1))
 		{
 			if(nariz == true)
 			{
@@ -67,12 +67,13 @@ public class Jatoba : MonoBehaviour {
                 //Invoke("VoltaraAndar", 4);
             }
 		}
-		else if (Input.GetKeyDown(KeyCode.Alpha4) || Input.GetKeyDown(KeyCode.Alpha2) || Input.GetKeyDown(KeyCode.Alpha3) || Input.GetKeyDown(KeyCode.Alpha5))
+		else if (Input.GetKeyDown(KeyCode.Alpha4) || Input.GetKeyDown(KeyCode.Alpha2) || Input.GetKeyDown(KeyCode.Alpha3) || Input.GetKeyDown(KeyCode.Alpha5)
+			|| Input.GetKeyDown(KeyCode.Keypad3) || Input.GetKeyDown(KeyCode.Keypad2) || Input.GetKeyDown(KeyCode.Keypad5) || Input.GetKeyDown(KeyCode.Keypad4) )
 		{
 			if (indio.transform.position.x >= 63 && indio.transform.position.x <= 63.9)
 			{
-				Debug.Log("Batata Doce");
-				SceneManager.LoadScene("gameOver");
+				fadeIn.SetActive(true);
+				Invoke("goGameOver", 1.5f);
 			}
 		}
 	}
@@ -95,7 +96,7 @@ public class Jatoba : MonoBehaviour {
     
     void goJatoba()
     {
-		if (Input.GetKeyDown(KeyCode.Alpha2))
+		if (Input.GetKeyDown(KeyCode.Alpha2) || Input.GetKeyDown(KeyCode.Keypad2))
         {
             if(paladar == true)
             {
@@ -110,11 +111,13 @@ public class Jatoba : MonoBehaviour {
                 GetComponent<Score>().Addscore();
             }
         }
-        else if (Input.GetKeyDown(KeyCode.Alpha1) || Input.GetKeyDown(KeyCode.Alpha4) || Input.GetKeyDown(KeyCode.Alpha3) || Input.GetKeyDown(KeyCode.Alpha5))
+        else if (Input.GetKeyDown(KeyCode.Alpha1) || Input.GetKeyDown(KeyCode.Alpha4) || Input.GetKeyDown(KeyCode.Alpha3) || Input.GetKeyDown(KeyCode.Alpha5)
+			|| Input.GetKeyDown(KeyCode.Keypad1) || Input.GetKeyDown(KeyCode.Keypad3) || Input.GetKeyDown(KeyCode.Keypad5) || Input.GetKeyDown(KeyCode.Keypad4) )
         {
             if (indio.transform.position.x >= 65 && indio.transform.position.x <= 65.1)
             {
-                SceneManager.LoadScene("gameOver");
+				fadeIn.SetActive(true);
+				Invoke("goGameOver", 1.5f);
             }
         }
     }
@@ -123,5 +126,10 @@ public class Jatoba : MonoBehaviour {
 		personagem.goOrStay = true;
 		indio.GetComponent<Animator>().SetBool("parar", false);
 		indio.GetComponent<Animator>().SetBool("comer", false);
+	}
+
+	void goGameOver()
+	{
+		SceneManager.LoadScene("gameOver");
 	}
 }

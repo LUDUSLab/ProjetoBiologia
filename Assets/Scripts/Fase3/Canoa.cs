@@ -7,7 +7,7 @@ public class Canoa : MonoBehaviour {
 	public float velo, forcinhaPraPular;
 	private indiozinho personagem;
 	public bool goOrStay = true;
-	public GameObject canoa, indio, balaoDuvida, soulIndio;
+	public GameObject canoa, indio, balaoDuvida, soulIndio, fadeIn;
 	bool tato = false;
 	bool Gatilho = true;
 
@@ -51,7 +51,7 @@ public class Canoa : MonoBehaviour {
 
 	void goRemar()
 	{
-		if (Input.GetKeyDown(KeyCode.Alpha3))
+		if (Input.GetKeyDown(KeyCode.Alpha3) || Input.GetKeyDown(KeyCode.Keypad3))
 		{
 			if (indio.transform.position.x >= 11.5 && indio.transform.position.x <= 11.9 || indio.transform.position.x >=23.5 && indio.transform.position.x <=23.9
 				|| indio.transform.position.x >=35.5 && indio.transform.position.x <=35.9)
@@ -59,18 +59,20 @@ public class Canoa : MonoBehaviour {
 				balaoDuvida.SetActive(false);
 				goOrStay = true;
 				indio.GetComponent<Animator>().SetBool("remando", true);
-				//GetComponent<Score>().Addscore();
+				GetComponent<Score>().Addscore();
 				Invoke("AtivarTato", 3f);
                 GetComponent<Score>().Addscore();
 
             }
 		}
-		else if (Input.GetKeyDown(KeyCode.Alpha1) || Input.GetKeyDown(KeyCode.Alpha2) || Input.GetKeyDown(KeyCode.Alpha5) || Input.GetKeyDown(KeyCode.Alpha4))
+		else if (Input.GetKeyDown(KeyCode.Alpha1) || Input.GetKeyDown(KeyCode.Alpha2) || Input.GetKeyDown(KeyCode.Alpha5) || Input.GetKeyDown(KeyCode.Alpha4) 
+			|| Input.GetKeyDown(KeyCode.Keypad1) || Input.GetKeyDown(KeyCode.Keypad2) || Input.GetKeyDown(KeyCode.Keypad5) || Input.GetKeyDown(KeyCode.Keypad4))
 		{
 			if (indio.transform.position.x >= 11.5 && indio.transform.position.x <= 11.9 || indio.transform.position.x >=23.5 && indio.transform.position.x <=23.9
 				|| indio.transform.position.x >=35.5 && indio.transform.position.x <=35.9)
 			{
-				SceneManager.LoadScene("gameOver");
+				fadeIn.SetActive(true);
+				Invoke("goGameOver", 1.5f);
 			}
 		}
 
@@ -105,5 +107,10 @@ public class Canoa : MonoBehaviour {
 	void VoltaraAndar(){
 	
 		personagem.goOrStay = true;
+	}
+
+	void goGameOver()
+	{
+		SceneManager.LoadScene("gameOver");
 	}
 }

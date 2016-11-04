@@ -4,7 +4,7 @@ using UnityEngine.SceneManagement;
 
 public class Tronco : MonoBehaviour {
 
-	public GameObject indio, balaoDuvida, barraTempo;
+	public GameObject indio, balaoDuvida, barraTempo, fadeIn;
 	bool tato = false;
 	private indiozinho personagem;
 	public float forcinhaPraPular;
@@ -40,7 +40,7 @@ public class Tronco : MonoBehaviour {
 
 	void goEscalada()
 	{
-		if (Input.GetKeyDown(KeyCode.Alpha3))
+		if (Input.GetKeyDown(KeyCode.Alpha3) || Input.GetKeyDown(KeyCode.Keypad3))
 		{
 			if (indio.transform.position.x >= 113.0 && indio.transform.position.x <= 113.4)
 			{
@@ -56,11 +56,12 @@ public class Tronco : MonoBehaviour {
                 GetComponent<Score>().Addscore();
 			}
 		}
-		else if (Input.GetKeyDown(KeyCode.Alpha1) || Input.GetKeyDown(KeyCode.Alpha2) || Input.GetKeyDown(KeyCode.Alpha5) || Input.GetKeyDown(KeyCode.Alpha4))
+		else if (Input.GetKeyDown(KeyCode.Alpha1) || Input.GetKeyDown(KeyCode.Alpha2) || Input.GetKeyDown(KeyCode.Alpha5) || Input.GetKeyDown(KeyCode.Alpha4) || Input.GetKeyDown(KeyCode.Keypad1) || Input.GetKeyDown(KeyCode.Keypad2) || Input.GetKeyDown(KeyCode.Keypad5) || Input.GetKeyDown(KeyCode.Keypad4))
 		{
 			if (indio.transform.position.x >= 113.0 && indio.transform.position.x <= 113.4)
 			{
-				SceneManager.LoadScene("gameOver");
+				fadeIn.SetActive(true);
+				Invoke("goGameOver", 1.5f);
 			}
 		}
 
@@ -84,5 +85,10 @@ public class Tronco : MonoBehaviour {
 	void VoltaraAndar(){
 		indio.GetComponent<Animator>().SetBool("parar", false);
 		personagem.goOrStay = true;
+	}
+
+	void goGameOver()
+	{
+		SceneManager.LoadScene("gameOver");
 	}
 }

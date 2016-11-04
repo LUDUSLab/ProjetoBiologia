@@ -4,7 +4,7 @@ using UnityEngine.SceneManagement;
 
 public class Escalada : MonoBehaviour {
 
-    public GameObject indio, balaoDuvida, barraTempo;
+    public GameObject indio, balaoDuvida, barraTempo, fadeIn;
     bool tato = false;
     private indiozinho personagem;
 	public float forcinhaPraPular;
@@ -29,7 +29,8 @@ public class Escalada : MonoBehaviour {
 				balaoDuvida.SetActive (true);
                 barraTempo.SetActive(true);
                 personagem.goOrStay = false;
-                indio.GetComponent<Animator>().SetBool("parar", true);
+				indio.GetComponent<Animator>().SetBool("levantar", true);
+                //indio.GetComponent<Animator>().SetBool("parar", true);
                 tato = true;
             }
         }
@@ -37,7 +38,7 @@ public class Escalada : MonoBehaviour {
 
 	void goEscalada()
 	{
-		if (Input.GetKeyDown(KeyCode.Alpha3))
+		if (Input.GetKeyDown(KeyCode.Alpha3) || Input.GetKeyDown(KeyCode.Keypad3))
         {
             if (indio.transform.position.x >= 4.3 && indio.transform.position.x <= 4.7)
             {
@@ -53,11 +54,13 @@ public class Escalada : MonoBehaviour {
 				GetComponent<Score>().Addscore();
             }
         }
-        else if (Input.GetKeyDown(KeyCode.Alpha1) || Input.GetKeyDown(KeyCode.Alpha2) || Input.GetKeyDown(KeyCode.Alpha4) || Input.GetKeyDown(KeyCode.Alpha5))
+        else if (Input.GetKeyDown(KeyCode.Alpha1) || Input.GetKeyDown(KeyCode.Alpha2) || Input.GetKeyDown(KeyCode.Alpha4) || Input.GetKeyDown(KeyCode.Alpha5)
+			|| Input.GetKeyDown(KeyCode.Keypad1) || Input.GetKeyDown(KeyCode.Keypad2) || Input.GetKeyDown(KeyCode.Keypad5) || Input.GetKeyDown(KeyCode.Keypad4))
         {
             if (indio.transform.position.x >= 4.3 && indio.transform.position.x <= 4.7)
             {
-                SceneManager.LoadScene("gameOver");
+				fadeIn.SetActive(true);
+				Invoke("goGameOver", 1.5f);
             }
         }
 
@@ -67,5 +70,11 @@ public class Escalada : MonoBehaviour {
 		personagem.goOrStay = true;
 		indio.GetComponent<Animator>().SetBool("parar", false);
 		indio.GetComponent<Animator>().SetBool("pulando", false);
+		indio.GetComponent<Animator>().SetBool("levantar", false);
+	}
+
+	void goGameOver()
+	{
+		SceneManager.LoadScene("gameOver");
 	}
 }

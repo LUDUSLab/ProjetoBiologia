@@ -4,7 +4,7 @@ using UnityEngine.SceneManagement;
 
 public class CheirarFlor : MonoBehaviour {
 
-	public GameObject  indio, balaoDuvida, 	barraTempoObject, flores;
+	public GameObject  indio, balaoDuvida, 	barraTempoObject, flores, fadeIn;
 	private indiozinho personagem;
 	bool nariz = false, parar = false;
 	//public float tempoBarrinha;
@@ -38,7 +38,7 @@ public class CheirarFlor : MonoBehaviour {
 
 	void goCheirar()
 	{
-		if(Input.GetKeyDown(KeyCode.Alpha1))
+		if(Input.GetKeyDown(KeyCode.Alpha1) || Input.GetKeyDown(KeyCode.Keypad1))
 		{
 			if(indio.transform.position.x >=96.1 && indio.transform.position.x <= 96.4)
 			{
@@ -53,12 +53,13 @@ public class CheirarFlor : MonoBehaviour {
 				Invoke("SumirFlor", 2);
 			}
 		}
-		else if (Input.GetKeyDown(KeyCode.Alpha5) || Input.GetKeyDown(KeyCode.Alpha2) || Input.GetKeyDown(KeyCode.Alpha3) || Input.GetKeyDown(KeyCode.Alpha4))
+		else if (Input.GetKeyDown(KeyCode.Alpha5) || Input.GetKeyDown(KeyCode.Alpha2) || Input.GetKeyDown(KeyCode.Alpha3) || Input.GetKeyDown(KeyCode.Alpha4) || Input.GetKeyDown(KeyCode.Keypad3) || Input.GetKeyDown(KeyCode.Keypad2) || Input.GetKeyDown(KeyCode.Keypad5) || Input.GetKeyDown(KeyCode.Keypad4))
 		{
 			if (indio.transform.position.x >= 94.1 && indio.transform.position.x <= 94.4)
 			{
 				
-				SceneManager.LoadScene("gameOver");
+				fadeIn.SetActive(true);
+				Invoke("goGameOver", 1.5f);
 			}
 		}
 	}
@@ -68,5 +69,10 @@ public class CheirarFlor : MonoBehaviour {
 		indio.GetComponent<Animator>().SetBool("pegar", false);
 		indio.GetComponent<Animator>().SetBool("parar", false);
 		personagem.goOrStay = true;
+	}
+
+	void goGameOver()
+	{
+		SceneManager.LoadScene("gameOver");
 	}
 }
