@@ -52,9 +52,8 @@ public class Tronco : MonoBehaviour {
 				//this.GetComponent<Escalada>().enabled = false;
 				indio.GetComponent<Animator>().SetBool("empurrar", true);
 				Invoke("mudarOvalor", 2);
-				//personagem.goOrStay = true;
-
-				//GetComponent<Score>().Addscore();
+                //personagem.goOrStay = true;
+                GetComponent<Score>().Addscore();
 			}
 		}
 		else if (Input.GetKeyDown(KeyCode.Alpha1) || Input.GetKeyDown(KeyCode.Alpha2) || Input.GetKeyDown(KeyCode.Alpha5) || Input.GetKeyDown(KeyCode.Alpha4))

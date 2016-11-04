@@ -46,8 +46,9 @@ public class Passaro : MonoBehaviour {
 				barraTempo.SetActive(false);
 				personagem.goOrStay = true;
 				indio.GetComponent<Animator>().SetBool("parar", false);
+                GetComponent<Score>().Addscore();
 
-			}
+            }
 		}
 		else if(Input.GetKeyDown(KeyCode.Alpha1) || Input.GetKeyDown(KeyCode.Alpha2) || Input.GetKeyDown(KeyCode.Alpha3) || Input.GetKeyDown(KeyCode.Alpha5))
 			{

@@ -61,8 +61,9 @@ public class Canoa : MonoBehaviour {
 				indio.GetComponent<Animator>().SetBool("remando", true);
 				//GetComponent<Score>().Addscore();
 				Invoke("AtivarTato", 3f);
+                GetComponent<Score>().Addscore();
 
-			}
+            }
 		}
 		else if (Input.GetKeyDown(KeyCode.Alpha1) || Input.GetKeyDown(KeyCode.Alpha2) || Input.GetKeyDown(KeyCode.Alpha5) || Input.GetKeyDown(KeyCode.Alpha4))
 		{

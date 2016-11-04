@@ -48,7 +48,7 @@ public class CheirarFlor : MonoBehaviour {
 				//indio.GetComponent<Animator>().SetBool("cheirar", false);
 				indio.GetComponent<Animator>().SetBool("pegar", true);
 				indio.GetComponent<Animator>().SetBool("parar", false);
-				//GetComponent<Score>().Addscore();
+				GetComponent<Score>().Addscore();
 				//KD ELE CHEIRANDO
 				Invoke("SumirFlor", 2);
 			}

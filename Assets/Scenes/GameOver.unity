@@ -617,6 +617,7 @@ MonoBehaviour:
   highScoreText: {fileID: 1555279023}
   scoreText: {fileID: 1495952711}
   hudSair: {fileID: 159699862}
+  fade: {fileID: 1049038856}
 --- !u!1 &374221930
 GameObject:
   m_ObjectHideFlags: 0
@@ -1060,6 +1061,11 @@ CanvasRenderer:
     type: 2}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 935030574}
+--- !u!1 &1049038856 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 1000012863902438, guid: 77a2b8d59d49d2f439b849f83685b5ab,
+    type: 2}
+  m_PrefabInternal: {fileID: 1477570246}
 --- !u!1 &1075265824
 GameObject:
   m_ObjectHideFlags: 0
@@ -1606,6 +1612,10 @@ Prefab:
         type: 2}
       propertyPath: m_Pivot.y
       value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 1000012863902438, guid: 77a2b8d59d49d2f439b849f83685b5ab, type: 2}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 77a2b8d59d49d2f439b849f83685b5ab, type: 2}

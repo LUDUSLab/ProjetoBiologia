@@ -47,7 +47,7 @@ public class Botoes : MonoBehaviour {
 
     void goAudicao()
     {
-		if (Input.GetKeyDown(KeyCode.Keypad4)|| Input.GetKeyDown(KeyCode.R))
+		if (Input.GetKeyDown(KeyCode.Alpha4))
         {
             if(balAud.active == true)
             {
@@ -56,6 +56,7 @@ public class Botoes : MonoBehaviour {
                 personagem.goOrStay = true;
                 indio.GetComponent<Animator>().SetBool("parar", false);
                 indio.GetComponent<Animator>().SetBool("escutar", false);
+                GetComponent<Score>().Addscore();
             }
         }
     }
@@ -77,7 +78,7 @@ public class Botoes : MonoBehaviour {
 
     void goTato()
     {
-		if (Input.GetKeyDown(KeyCode.Keypad3)|| Input.GetKeyDown(KeyCode.E))
+		if (Input.GetKeyDown(KeyCode.Alpha3))
         {
             if (tato == true)
             {
@@ -86,6 +87,7 @@ public class Botoes : MonoBehaviour {
                 balTato.SetActive(false);
                 personagem.goOrStay = true;
                 indio.GetComponent<Animator>().SetBool("parar", false);
+                GetComponent<Score>().Addscore();
             }
         }
     }
@@ -112,7 +114,7 @@ public class Botoes : MonoBehaviour {
 
     void goVisao()
     {
-		if (Input.GetKeyDown(KeyCode.Keypad5)|| Input.GetKeyDown(KeyCode.T))
+		if (Input.GetKeyDown(KeyCode.Alpha5))
         {
             if (balVisao.active == true)
             {
@@ -124,6 +126,7 @@ public class Botoes : MonoBehaviour {
                 indio.GetComponent<Rigidbody2D>().AddForce(direcaoPulo * forcinhaPraPular);
                 //personagem.goOrStay = true;
                 Invoke("VoltaraAndar", 0.8f);
+                GetComponent<Score>().Addscore();
             }
         }
     }
@@ -146,7 +149,7 @@ public class Botoes : MonoBehaviour {
 
     void goNariz()
     {
-		if (Input.GetKeyDown(KeyCode.Keypad1)|| Input.GetKeyDown(KeyCode.Q))
+		if (Input.GetKeyDown(KeyCode.Alpha1))
         {
             if (balPaladar.active == true)
             {
@@ -155,6 +158,7 @@ public class Botoes : MonoBehaviour {
                 personagem.goOrStay = true;
                 indio.GetComponent<Animator>().SetBool("parar", false);
                 indio.GetComponent<Animator>().SetBool("cheirar", false);
+                GetComponent<Score>().Addscore();
             }
         }
     }
@@ -176,7 +180,7 @@ public class Botoes : MonoBehaviour {
 
     void goComer()
     {
-		if (Input.GetKeyDown(KeyCode.Keypad2)|| Input.GetKeyDown(KeyCode.W))
+		if (Input.GetKeyDown(KeyCode.Alpha2))
         {
             if (balOlfato.active == true)
             {
@@ -185,6 +189,7 @@ public class Botoes : MonoBehaviour {
                 balOlfato.SetActive(false);
                 indio.GetComponent<Animator>().SetBool("comer", true);
                 Invoke("VoltaraAndar", 1.5f);
+                GetComponent<Score>().Addscore();
             }
         }
     }
