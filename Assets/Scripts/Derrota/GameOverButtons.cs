@@ -3,7 +3,8 @@ using System.Collections;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
-public class GameOverButtons : MonoBehaviour {
+public class GameOverButtons : MonoBehaviour
+{
 
     private string tryAgain;
     public Text highScoreText;
@@ -18,24 +19,24 @@ public class GameOverButtons : MonoBehaviour {
         Invoke("tirarFade", 2.2f);
     }
 
-    void tirarFade ()
+    void tirarFade()
     {
         fade.SetActive(false);
     }
 
-	public void Menu()
-	{
+    public void Menu()
+    {
         fadeIn.SetActive(true);
         Invoke("goMenu", 1.5f);
-	}
+    }
 
     void goMenu()
     {
         SceneManager.LoadScene("Menu");
     }
 
-	public void jogarNovamente()
-	{
+    public void jogarNovamente()
+    {
         fadeIn.SetActive(true);
         Invoke("deNovo", 1.5f);
     }
@@ -45,7 +46,7 @@ public class GameOverButtons : MonoBehaviour {
         SceneManager.LoadScene(tryAgain);
     }
 
-    
+
     public void ProximaFase()
     {
         fadeIn.SetActive(true);
@@ -70,30 +71,23 @@ public class GameOverButtons : MonoBehaviour {
 
     void ViewScore()
     {
-<<<<<<< HEAD
-		if (tryAgain == "Fase1")
-		{
-			highScoreText.text = PlayerPrefs.GetInt("recorde").ToString();
-			int localScore = (int)Score.score;
-			scoreText.text = localScore.ToString();
-		}
-		else if (tryAgain == "CenarioBonito")
-		{
-			highScoreText.text = PlayerPrefs.GetInt("recorde2").ToString();
-			int localScore = (int)Score.score;
-			scoreText.text = localScore.ToString();
-		}
-		else if (tryAgain == "Fase3")
-		{
-			highScoreText.text = PlayerPrefs.GetInt("recorde3").ToString();
-			int localScore = (int)Score.score;
-			scoreText.text = localScore.ToString();
-		}
-=======
-        highScoreText.text = PlayerPrefs.GetInt("highScore").ToString();
-        int localScore = (int)Score.score;
-        scoreText.text = localScore.ToString();
->>>>>>> origin/master
+        if (tryAgain == "Fase1")
+        {
+            highScoreText.text = PlayerPrefs.GetInt("recorde").ToString();
+            int localScore = (int)Score.score;
+            scoreText.text = localScore.ToString();
+        }
+        else if (tryAgain == "CenarioBonito")
+        {
+            highScoreText.text = PlayerPrefs.GetInt("recorde2").ToString();
+            int localScore = (int)Score.score;
+            scoreText.text = localScore.ToString();
+        }
+        else if (tryAgain == "Fase3")
+        {
+            highScoreText.text = PlayerPrefs.GetInt("recorde3").ToString();
+            int localScore = (int)Score.score;
+            scoreText.text = localScore.ToString();
+        }
     }
-
 }
