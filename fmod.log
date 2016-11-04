@@ -27,9 +27,6 @@
 [LOG] Thread::callback                         : * FMOD Studio bank load thread started
 [LOG] Profile::init                            : Profiler listening on port: 9264
 [ERR] RuntimeBankModel::openFile               : Failed to open file '/Users/ludus1/Desktop/Uirapuru\Build\Desktop/.strings.bank'
-[ERR] RuntimeBankModel::openFile               : Failed to open file '/Users/ludus1/Desktop/Uirapuru\Build\Desktop/.bank'
-[ERR] RuntimeBankModel::openFile               : Failed to open file '/Users/ludus1/Desktop/Uirapuru\Build\Desktop/Master Bank.bank'
-[ERR] RuntimeBankModel::openFile               : Failed to open file '/Users/ludus1/Desktop/Uirapuru\Build\Desktop/Master Bank.strings.bank'
 [LOG] Thread::callback                         : * FMOD Studio update thread finished
 [LOG] Thread::close                            : FMOD Studio update thread thread destroyed
 [LOG] Thread::callback                         : * FMOD Studio bank load thread finished
