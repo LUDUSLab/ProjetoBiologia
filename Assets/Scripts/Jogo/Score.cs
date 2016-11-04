@@ -15,14 +15,14 @@ public class Score : MonoBehaviour
 
     void Start()
     {
-		PlayerPrefs.SetString("nomeFase", SceneManager.GetActiveScene().name);
+        nomeFase = SceneManager.GetActiveScene().name;
         score = 0;
         cont = 0;
     }
 
     void Update()
     {
-		checkFase = PlayerPrefs.GetString("nomeFase");
+		//checkFase = PlayerPrefs.GetString("nomeFase");
 		cont += Time.deltaTime ; // conta a pontuação de acordo com o tempo decorrido
 
         if (scoreText) // Atualiza somente se encontrar um componente de texto
@@ -37,32 +37,32 @@ public class Score : MonoBehaviour
     public static void FinalScore()
     {
         score = score / cont;
-        highScore = PlayerPrefs.GetInt("highScore", 0); // recupera o high score que é armazenado localmente
-		highScore2 = PlayerPrefs.GetInt("highScore2", 0);
-		highScore3 = PlayerPrefs.GetInt("highScore3", 0);
+        highScore = PlayerPrefs.GetInt("recorde", 0); // recupera o high score que é armazenado localmente
+		highScore2 = PlayerPrefs.GetInt("recorde2", 0);
+		highScore3 = PlayerPrefs.GetInt("recorde3", 0);
 
-		if ( checkFase == "Fase1")
+		if ( nomeFase == "Fase1")
 		{
 			if (score > highScore) // salva o high score, caso este seja alcançado
 			{
 				highScore = (int)score;
-				PlayerPrefs.SetInt("highScore", highScore);
+				PlayerPrefs.SetInt("recorde", highScore);
 			}
 		}
-		else if ( checkFase == "CenarioBonito")
+		else if ( nomeFase == "CenarioBonito")
 		{
 			if (score > highScore2) // salva o high score, caso este seja alcançado
 			{
 				highScore2 = (int)score;
-				PlayerPrefs.SetInt("highScore2", highScore2);
+				PlayerPrefs.SetInt("recorde2", highScore2);
 			}
 		}
-		else if ( checkFase == "Fase3")
+		else if ( nomeFase == "Fase3")
 		{
 			if (score > highScore3) // salva o high score, caso este seja alcançado
 			{
 				highScore3 = (int)score;
-				PlayerPrefs.SetInt("highScore3", highScore3);
+				PlayerPrefs.SetInt("recorde3", highScore3);
 			}
 		}
 

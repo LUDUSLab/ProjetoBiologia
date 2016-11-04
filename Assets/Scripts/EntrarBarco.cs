@@ -29,7 +29,7 @@ public class EntrarBarco : MonoBehaviour {
 				personagem.goOrStay = false;
 				indio.GetComponent<Animator>().SetBool("parar", true);
 				barco = true;
-				Invoke("pularNoBarco", 2);
+				Invoke("pularNoBarco", 0.5f);
 
 			}
 		}
