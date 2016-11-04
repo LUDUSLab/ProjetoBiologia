@@ -70,23 +70,9 @@ public class GameOverButtons : MonoBehaviour {
 
     void ViewScore()
     {
-		if (tryAgain == "Fase1")
-		{
-			highScoreText.text = PlayerPrefs.GetInt("highScore").ToString();
-			int localScore = (int)Score.score;
-			scoreText.text = localScore.ToString();
-		}
-		else if (tryAgain == "CenarioBonito")
-		{
-			highScoreText.text = PlayerPrefs.GetInt("highScore2").ToString();
-			int localScore = (int)Score.score;
-			scoreText.text = localScore.ToString();
-		}
-		else if (tryAgain == "Fase3")
-		{
-			highScoreText.text = PlayerPrefs.GetInt("highScore3").ToString();
-			int localScore = (int)Score.score;
-			scoreText.text = localScore.ToString();
-		}
+        highScoreText.text = PlayerPrefs.GetInt("highScore").ToString();
+        int localScore = (int)Score.score;
+        scoreText.text = localScore.ToString();
     }
+
 }
