@@ -9,6 +9,7 @@ public class Pedrinha : MonoBehaviour {
 	bool visao = false;
 	private indiozinho personagem;
 	public float forcinhaPraPular;
+    public string pulo = "event:/pulo";
 
 	// Use this for initialization
 	void Start () {
@@ -91,7 +92,8 @@ public class Pedrinha : MonoBehaviour {
 				Vector2 direcaoPulo = new Vector2(0.2f, 0.8f);
 				direcaoPulo.Normalize();
 				indio.GetComponent<Rigidbody2D>().AddForce(direcaoPulo * forcinhaPraPular);
-				//this.GetComponent<Escalada>().enabled = false;
+                //this.GetComponent<Escalada>().enabled = false;
+                FMODUnity.RuntimeManager.PlayOneShot(pulo);
 				indio.GetComponent<Animator>().SetBool("pulando", true);
 				//personagem.goOrStay = true;
 				Invoke("VoltaraAndar", 0.6f);

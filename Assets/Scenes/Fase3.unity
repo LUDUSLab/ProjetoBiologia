@@ -1636,7 +1636,7 @@ ParticleSystem:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 843100292}
-  serializedVersion: 2
+  serializedVersion: 4
   lengthInSec: 5
   startDelay:
     scalar: 0
@@ -1674,12 +1674,13 @@ ParticleSystem:
       m_RotationOrder: 4
     minMaxState: 0
   speed: 1
-  randomSeed: 3490259752
   looping: 1
   prewarm: 0
   playOnAwake: 1
   moveWithTransform: 0
+  autoRandomSeed: 0
   scalingMode: 1
+  randomSeed: -804707544
   InitialModule:
     serializedVersion: 2
     enabled: 1
@@ -4584,6 +4585,7 @@ MonoBehaviour:
   barraTempo: {fileID: 973367306}
   fadeIn: {fileID: 117538757}
   forcinhaPraPular: 377
+  pulo: event:/pulo
 --- !u!114 &1195597058
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4643,6 +4645,7 @@ MonoBehaviour:
   balaodeDuvida: {fileID: 1342114615}
   barraTempo: {fileID: 973367306}
   fadeIn: {fileID: 117538757}
+  canto: event:/passaro
 --- !u!114 &1195597062
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4934,6 +4937,9 @@ GameObject:
   - 124: {fileID: 1258154940}
   - 81: {fileID: 1258154939}
   - 114: {fileID: 1258154944}
+  - 114: {fileID: 1258154945}
+  - 114: {fileID: 1258154947}
+  - 114: {fileID: 1258154946}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -5031,6 +5037,62 @@ MonoBehaviour:
   - {fileID: 1372009179}
   - {fileID: 993955540}
   smoothing: 30
+--- !u!114 &1258154945
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1258154938}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 86c6556701af9e04380698b89f691b6e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ListenerNumber: 0
+--- !u!114 &1258154946
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1258154938}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Event: event:/Musica
+  PlayEvent: 1
+  StopEvent: 2
+  CollisionTag: 
+  AllowFadeout: 1
+  TriggerOnce: 0
+  Preload: 0
+  Params: []
+  OverrideAttenuation: 0
+  OverrideMinDistance: 0
+  OverrideMaxDistance: 0
+--- !u!114 &1258154947
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1258154938}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Event: event:/Background
+  PlayEvent: 1
+  StopEvent: 2
+  CollisionTag: 
+  AllowFadeout: 1
+  TriggerOnce: 0
+  Preload: 0
+  Params: []
+  OverrideAttenuation: 0
+  OverrideMinDistance: 1
+  OverrideMaxDistance: 20
 --- !u!1 &1259641309
 GameObject:
   m_ObjectHideFlags: 0
@@ -5926,7 +5988,7 @@ ParticleSystem:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1541705882}
-  serializedVersion: 2
+  serializedVersion: 4
   lengthInSec: 5
   startDelay:
     scalar: 0
@@ -5964,12 +6026,13 @@ ParticleSystem:
       m_RotationOrder: 4
     minMaxState: 0
   speed: 1
-  randomSeed: 3490259752
   looping: 1
   prewarm: 0
   playOnAwake: 1
   moveWithTransform: 0
+  autoRandomSeed: 0
   scalingMode: 1
+  randomSeed: -804707544
   InitialModule:
     serializedVersion: 2
     enabled: 1

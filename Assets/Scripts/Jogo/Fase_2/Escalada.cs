@@ -8,6 +8,7 @@ public class Escalada : MonoBehaviour {
     bool tato = false;
     private indiozinho personagem;
 	public float forcinhaPraPular;
+    public string pulo = "event:/pulo";
 
 	// Use this for initialization
 	void Start () {
@@ -42,6 +43,7 @@ public class Escalada : MonoBehaviour {
         {
             if (indio.transform.position.x >= 4.3 && indio.transform.position.x <= 4.7)
             {
+                FMODUnity.RuntimeManager.PlayOneShot(pulo);
                 balaoDuvida.SetActive(false);
                 barraTempo.SetActive(false);
                 Vector2 direcaoPulo = new Vector2(0.1f, 0.7f);

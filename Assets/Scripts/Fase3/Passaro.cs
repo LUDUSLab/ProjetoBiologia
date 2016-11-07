@@ -7,6 +7,7 @@ public class Passaro : MonoBehaviour {
 	public GameObject indio, balaodeDuvida, barraTempo, fadeIn;
 	bool audicao = false;
 	private indiozinho personagem;
+    public string canto = "event:/passaro";
 
 	void Start () {
 		personagem = indio.GetComponent<indiozinho>();
@@ -27,6 +28,7 @@ public class Passaro : MonoBehaviour {
 				balaodeDuvida.SetActive(true);
 				barraTempo.SetActive(true);
 				personagem.goOrStay = false;
+                FMODUnity.RuntimeManager.PlayOneShot(canto);
 				indio.GetComponent<Animator>().SetBool("pulando", false);
 				indio.GetComponent<Animator>().SetBool("parar", true);
 				indio.GetComponent<Animator>().SetBool("escutar", true);
@@ -41,7 +43,7 @@ public class Passaro : MonoBehaviour {
 		{
 			if(indio.transform.position.x >= 141.3 && indio.transform.position.x <= 141.5)
 			{
-				indio.GetComponent<Animator>().SetBool("escutar", false);
+                indio.GetComponent<Animator>().SetBool("escutar", false);
 				balaodeDuvida.SetActive(false);
 				barraTempo.SetActive(false);
 				personagem.goOrStay = true;
