@@ -2154,6 +2154,7 @@ MonoBehaviour:
   flor: {fileID: 1750328287}
   botoes: {fileID: 559467211}
   forcinhaPraPular: 377
+  canto: event:/Passaro
 --- !u!114 &785718427
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5127,7 +5128,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   LoadEvent: 1
-  UnloadEvent: 2
+  UnloadEvent: 0
   Banks:
   - Master Bank
   - Master Bank.strings

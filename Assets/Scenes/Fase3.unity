@@ -4602,6 +4602,7 @@ MonoBehaviour:
   barraTempoObject: {fileID: 973367306}
   flores: {fileID: 1276262044}
   fadeIn: {fileID: 117538757}
+  cheirar: event:/Cheirar
 --- !u!114 &1195597059
 MonoBehaviour:
   m_ObjectHideFlags: 0

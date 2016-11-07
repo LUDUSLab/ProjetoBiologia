@@ -10,6 +10,7 @@ public class Canoa : MonoBehaviour {
 	public GameObject canoa, indio, balaoDuvida, soulIndio, fadeIn;
 	bool tato = false;
 	bool Gatilho = true;
+    public string remar = "event:/Remar";
 
 	void Start(){
 		personagem = indio.GetComponent<indiozinho>();
@@ -59,6 +60,7 @@ public class Canoa : MonoBehaviour {
 				balaoDuvida.SetActive(false);
 				goOrStay = true;
 				indio.GetComponent<Animator>().SetBool("remando", true);
+                FMODUnity.RuntimeManager.PlayOneShot(remar);
 				GetComponent<Score>().Addscore();
 				Invoke("AtivarTato", 3f);
                 GetComponent<Score>().Addscore();

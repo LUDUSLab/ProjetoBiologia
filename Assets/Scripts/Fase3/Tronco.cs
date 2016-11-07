@@ -9,7 +9,7 @@ public class Tronco : MonoBehaviour {
 	private indiozinho personagem;
 	public float forcinhaPraPular;
 	public GameObject tronco;
-
+    public string caindo = "event:/Caindo";
 
 	void Start () {
 		personagem = indio.GetComponent<indiozinho>();
@@ -44,13 +44,14 @@ public class Tronco : MonoBehaviour {
 		{
 			if (indio.transform.position.x >= 113.0 && indio.transform.position.x <= 113.4)
 			{
-				barraTempo.SetActive(false);
+                FMODUnity.RuntimeManager.PlayOneShot(caindo);
+                barraTempo.SetActive(false);
 				balaoDuvida.SetActive(false);
-				//Vector2 direcaoPulo = new Vector2(0.1f, 0.7f);
-				//direcaoPulo.Normalize();
-				//indio.GetComponent<Rigidbody2D>().AddForce(direcaoPulo * forcinhaPraPular);
-				//this.GetComponent<Escalada>().enabled = false;
-				indio.GetComponent<Animator>().SetBool("empurrar", true);
+                //Vector2 direcaoPulo = new Vector2(0.1f, 0.7f);
+                //direcaoPulo.Normalize();
+                //indio.GetComponent<Rigidbody2D>().AddForce(direcaoPulo * forcinhaPraPular);
+                //this.GetComponent<Escalada>().enabled = false;
+                indio.GetComponent<Animator>().SetBool("empurrar", true);
 				Invoke("mudarOvalor", 2);
                 //personagem.goOrStay = true;
                 GetComponent<Score>().Addscore();

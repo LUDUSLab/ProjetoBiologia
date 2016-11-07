@@ -7,6 +7,8 @@ public class CheirarFlor : MonoBehaviour {
 	public GameObject  indio, balaoDuvida, 	barraTempoObject, flores, fadeIn;
 	private indiozinho personagem;
 	bool nariz = false, parar = false;
+    public string cheirar = "event:/Cheirar";
+
 	//public float tempoBarrinha;
 	//private float tempoInicial;
 	// Use this for initialization
@@ -30,6 +32,7 @@ public class CheirarFlor : MonoBehaviour {
 				personagem.goOrStay = false;
 				indio.GetComponent<Animator>().SetBool("parar", true);
 				indio.GetComponent<Animator>().SetBool("cheirar", true);
+                FMODUnity.RuntimeManager.PlayOneShot(cheirar);
 				nariz = true;
 			}
 
