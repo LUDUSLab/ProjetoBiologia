@@ -8,6 +8,7 @@ public class EntrarBarco : MonoBehaviour {
 	private indiozinho personagem;
 	bool barco = false;
 	public float forcinhaPraPular;
+    public string remar = "event:/Remar";
 
 	// Use this for initialization
 	void Start () {
@@ -52,7 +53,8 @@ public class EntrarBarco : MonoBehaviour {
 
 	void Navegar(){
 		canoa.GetComponent<Animator>().SetBool("navegar", true);
-		indio.GetComponent<Animator>().SetBool("remar", true);
+        FMODUnity.RuntimeManager.PlayOneShot(remar);
+        indio.GetComponent<Animator>().SetBool("remar", true);
 		Invoke ("FadeIn", 3f);
 	}
 

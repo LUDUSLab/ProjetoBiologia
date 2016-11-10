@@ -60,7 +60,6 @@ public class Canoa : MonoBehaviour {
 				balaoDuvida.SetActive(false);
 				goOrStay = true;
 				indio.GetComponent<Animator>().SetBool("remando", true);
-                FMODUnity.RuntimeManager.PlayOneShot(remar);
 				GetComponent<Score>().Addscore();
 				Invoke("AtivarTato", 3f);
                 GetComponent<Score>().Addscore();
