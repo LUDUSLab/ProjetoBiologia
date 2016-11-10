@@ -23,30 +23,38 @@
 [LOG] Thread::initThread                       : - Stacksize 65536.  Stack pointer 0000000000000000 : usesemaphore = 0 : sleeptime = 1
 [LOG] Thread::callback                         : * FMOD Studio bank load thread started
 [LOG] Manager::readBank                        : fileversion = 80, compatVersion = 70 (oldest = 44, newest = 80)
-[LOG] SoundI::release                          : Forest+ambient,Forest+birds,Cicadas+and+Bee+Colony (0000000033C6D5D8)
-[LOG] SoundI::release                          : remove stream samples. (0000000033C6D5D8)
-[LOG] SoundI::release                          :     Forest+ambient,Forest+birds,Cicadas+and+Bee+Colony (0000000025BC53C8)
-[LOG] SoundI::release                          : release subsounds. (0000000033C6D5D8)
-[LOG] SoundI::release                          :     Forest+ambient,Forest+birds,Cicadas+and+Bee+Colony (0000000033C6C738)
-[LOG] SoundI::release                          : release codec. (0000000033C6D5D8)
-[LOG] SoundI::release                          : Cricket+sound+effect+(2) (0000000033C6C3F8)
-[LOG] SoundI::release                          : remove stream samples. (0000000033C6C3F8)
-[LOG] SoundI::release                          :     Cricket+sound+effect+(2) (0000000025BC4A68)
-[LOG] SoundI::release                          : release subsounds. (0000000033C6C3F8)
-[LOG] SoundI::release                          :     Cricket+sound+effect+(2) (0000000033C6D778)
-[LOG] SoundI::release                          : release codec. (0000000033C6C3F8)
-[LOG] SoundI::release                          : Gentle+Waves+&amp;+Lapping+Water+Sounds+SOUND+EFFECT (0000000033C6D0F8)
-[LOG] SoundI::release                          : remove stream samples. (0000000033C6D0F8)
-[LOG] SoundI::release                          :     Gentle+Waves+&amp;+Lapping+Water+Sounds+SOUND+EFFECT (0000000025BC48D8)
-[LOG] SoundI::release                          : release subsounds. (0000000033C6D0F8)
-[LOG] SoundI::release                          :     Gentle+Waves+&amp;+Lapping+Water+Sounds+SOUND+EFFECT (0000000033C6D298)
-[LOG] SoundI::release                          : release codec. (0000000033C6D0F8)
-[LOG] SoundI::release                          : Canto do Uiraparu - 20_10_16 20.33 (0000000033C6C258)
-[LOG] SoundI::release                          : remove stream samples. (0000000033C6C258)
-[LOG] SoundI::release                          :     Canto do Uiraparu - 20_10_16 20.33 (0000000025BC4D88)
-[LOG] SoundI::release                          : release subsounds. (0000000033C6C258)
-[LOG] SoundI::release                          :     Canto do Uiraparu - 20_10_16 20.33 (0000000033C6CDB8)
-[LOG] SoundI::release                          : release codec. (0000000033C6C258)
+[LOG] SoundI::release                          :  (0000000030B62D08)
+[LOG] SoundI::release                          : release subsounds. (0000000030B62D08)
+[LOG] SoundI::release                          :     Canto Uirapuru 1 (000000002054A3B8)
+[LOG] SoundI::release                          : release codec. (0000000030B62D08)
+[LOG] SoundI::release                          :  (0000000030B62FE8)
+[LOG] SoundI::release                          : release subsounds. (0000000030B62FE8)
+[LOG] SoundI::release                          :     FREE+SOUND+FX+Boats+Rowing+Boat+On+Lake+Oars+In+Water (0000000020548608)
+[LOG] SoundI::release                          : release codec. (0000000030B62FE8)
+[LOG] SoundI::release                          : Forest+ambient,Forest+birds,Cicadas+and+Bee+Colony (000000002085D6C8)
+[LOG] SoundI::release                          : remove stream samples. (000000002085D6C8)
+[LOG] SoundI::release                          :     Forest+ambient,Forest+birds,Cicadas+and+Bee+Colony (0000000020549288)
+[LOG] SoundI::release                          : release subsounds. (000000002085D6C8)
+[LOG] SoundI::release                          :     Forest+ambient,Forest+birds,Cicadas+and+Bee+Colony (000000002085E3C8)
+[LOG] SoundI::release                          : release codec. (000000002085D6C8)
+[LOG] SoundI::release                          : Cricket+sound+effect+(2) (000000002085D1E8)
+[LOG] SoundI::release                          : remove stream samples. (000000002085D1E8)
+[LOG] SoundI::release                          :     Cricket+sound+effect+(2) (0000000020548DD8)
+[LOG] SoundI::release                          : release subsounds. (000000002085D1E8)
+[LOG] SoundI::release                          :     Cricket+sound+effect+(2) (000000002085DBA8)
+[LOG] SoundI::release                          : release codec. (000000002085D1E8)
+[LOG] SoundI::release                          : Gentle+Waves+&amp;+Lapping+Water+Sounds+SOUND+EFFECT (000000002085E088)
+[LOG] SoundI::release                          : remove stream samples. (000000002085E088)
+[LOG] SoundI::release                          :     Gentle+Waves+&amp;+Lapping+Water+Sounds+SOUND+EFFECT (0000000020548928)
+[LOG] SoundI::release                          : release subsounds. (000000002085E088)
+[LOG] SoundI::release                          :     Gentle+Waves+&amp;+Lapping+Water+Sounds+SOUND+EFFECT (000000002085D388)
+[LOG] SoundI::release                          : release codec. (000000002085E088)
+[LOG] SoundI::release                          : Canto do Uiraparu - 20_10_16 20.33 (000000002085E8A8)
+[LOG] SoundI::release                          : remove stream samples. (000000002085E8A8)
+[LOG] SoundI::release                          :     Canto do Uiraparu - 20_10_16 20.33 (00000000205495A8)
+[LOG] SoundI::release                          : release subsounds. (000000002085E8A8)
+[LOG] SoundI::release                          :     Canto do Uiraparu - 20_10_16 20.33 (000000002085E568)
+[LOG] SoundI::release                          : release codec. (000000002085E8A8)
 [LOG] Thread::callback                         : * FMOD Studio update thread finished
 [LOG] Thread::close                            : FMOD Studio update thread thread destroyed
 [LOG] Thread::callback                         : * FMOD Studio bank load thread finished
@@ -77,28 +85,3 @@
 [LOG] Manager::readBank                        : fileversion = 80, compatVersion = 70 (oldest = 44, newest = 80)
 [LOG] Manager::readBank                        : fileversion = 80, compatVersion = 70 (oldest = 44, newest = 80)
 [LOG] PlaybackSystem::acquireMasterBus         : Setting master channel group format to 6
-[LOG] Thread::callback                         : * FMOD Studio bank load thread finished
-[LOG] Thread::close                            : FMOD Studio bank load thread thread destroyed
-[LOG] Thread::callback                         : * FMOD Studio sample load thread finished
-[LOG] Thread::close                            : FMOD Studio sample load thread thread destroyed
-[LOG] LiveUpdate::release                      : 
-[LOG] LiveUpdate::reset                        : Reset connection (reason Disconnected)
-[LOG] SystemI::close                           : 
-[LOG] SystemI::close                           : Stop all sounds
-[LOG] Thread::callback                         : * FMOD stream thread finished
-[LOG] Thread::close                            : FMOD stream thread thread destroyed
-[LOG] SystemI::close                           : Stream thread destroyed
-[LOG] Thread::callback                         : * FMOD mixer thread finished
-[LOG] Thread::close                            : FMOD mixer thread thread destroyed
-[LOG] SystemI::close                           : Free master channel group.
-[LOG] SystemI::close                           : Remove 'master' sound group.
-[LOG] SystemI::close                           : Free software output.
-[LOG] SystemI::close                           : Free emulated output.
-[LOG] SystemI::close                           : Free channel pool.
-[LOG] Thread::callback                         : * FMOD nonblocking thread (0) finished
-[LOG] Thread::close                            : FMOD nonblocking thread (0) thread destroyed
-[LOG] Thread::callback                         : * FMOD file thread finished
-[LOG] Thread::close                            : FMOD file thread thread destroyed
-[LOG] SystemI::close                           : done.
-
-[LOG] System::create                           : Header version = 1.08.13. Current version = 1.08.13.
