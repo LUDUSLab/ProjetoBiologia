@@ -260,7 +260,7 @@ Transform:
   - {fileID: 830724023}
   - {fileID: 1081205379}
   m_Father: {fileID: 888571627}
-  m_RootOrder: 6
+  m_RootOrder: 7
 --- !u!95 &117306953
 Animator:
   serializedVersion: 3
@@ -1714,7 +1714,7 @@ Transform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 438.89}
   m_Children: []
   m_Father: {fileID: 888571627}
-  m_RootOrder: 3
+  m_RootOrder: 4
 --- !u!212 &714045776
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -1856,7 +1856,7 @@ Transform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 21.339672}
   m_Children: []
   m_Father: {fileID: 888571627}
-  m_RootOrder: 1
+  m_RootOrder: 2
 --- !u!212 &765333387
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -1922,7 +1922,7 @@ Transform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: -15.681001}
   m_Children: []
   m_Father: {fileID: 888571627}
-  m_RootOrder: 0
+  m_RootOrder: 1
 --- !u!212 &779722575
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -2155,6 +2155,8 @@ MonoBehaviour:
   botoes: {fileID: 559467211}
   forcinhaPraPular: 377
   canto: event:/Passaro
+  pulo: event:/Pulo
+  cheirar: event:/Cheirar
 --- !u!114 &785718427
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2678,6 +2680,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children:
+  - {fileID: 1940426838}
   - {fileID: 779722574}
   - {fileID: 765333386}
   - {fileID: 1135213975}
@@ -2689,7 +2692,6 @@ Transform:
   - {fileID: 1244839033}
   - {fileID: 1240927893}
   - {fileID: 1936310622}
-  - {fileID: 1940426838}
   m_Father: {fileID: 0}
   m_RootOrder: 6
 --- !u!1 &948414833
@@ -3180,7 +3182,7 @@ Transform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 358.936}
   m_Children: []
   m_Father: {fileID: 888571627}
-  m_RootOrder: 2
+  m_RootOrder: 3
 --- !u!212 &1135213976
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -3394,7 +3396,7 @@ Transform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children: []
   m_Father: {fileID: 888571627}
-  m_RootOrder: 9
+  m_RootOrder: 10
 --- !u!95 &1240927894
 Animator:
   serializedVersion: 3
@@ -3477,7 +3479,7 @@ Transform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 7.042098}
   m_Children: []
   m_Father: {fileID: 888571627}
-  m_RootOrder: 8
+  m_RootOrder: 9
 --- !u!212 &1244839034
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -4445,7 +4447,7 @@ Transform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 91.881004}
   m_Children: []
   m_Father: {fileID: 888571627}
-  m_RootOrder: 4
+  m_RootOrder: 5
 --- !u!212 &1701630232
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -4926,7 +4928,7 @@ Transform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 90.80801}
   m_Children: []
   m_Father: {fileID: 888571627}
-  m_RootOrder: 10
+  m_RootOrder: 11
 --- !u!212 &1936310623
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -4998,7 +5000,7 @@ Transform:
   m_Children:
   - {fileID: 1600886208}
   m_Father: {fileID: 888571627}
-  m_RootOrder: 11
+  m_RootOrder: 0
 --- !u!114 &1940426839
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5090,7 +5092,9 @@ MonoBehaviour:
   AllowFadeout: 1
   TriggerOnce: 0
   Preload: 0
-  Params: []
+  Params:
+  - Name: Volume
+    Value: 80
   OverrideAttenuation: 0
   OverrideMinDistance: 0
   OverrideMaxDistance: 0
@@ -5112,7 +5116,9 @@ MonoBehaviour:
   AllowFadeout: 1
   TriggerOnce: 0
   Preload: 0
-  Params: []
+  Params:
+  - Name: Volume
+    Value: 80
   OverrideAttenuation: 0
   OverrideMinDistance: 1
   OverrideMaxDistance: 20
@@ -5165,7 +5171,7 @@ Transform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children: []
   m_Father: {fileID: 888571627}
-  m_RootOrder: 5
+  m_RootOrder: 6
 --- !u!95 &1971546955
 Animator:
   serializedVersion: 3
@@ -5372,7 +5378,7 @@ Transform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children: []
   m_Father: {fileID: 888571627}
-  m_RootOrder: 7
+  m_RootOrder: 8
 --- !u!212 &2100279125
 SpriteRenderer:
   m_ObjectHideFlags: 0
